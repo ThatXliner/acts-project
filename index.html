@@ -73,7 +73,11 @@
 				</div>
 			</div>
 		</div>
-
+		<div id="spa-replacement">hello</div>
+		<script>
+			document.getElementById("spa-replacement").innerHTML =
+				'<object type="text/html" data="./pages/test.html"></object>';
+		</script>
 		<div id="app"></div>
 		<script type="module" src="/main.js"></script>
 	</body>
