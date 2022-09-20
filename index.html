@@ -73,10 +73,22 @@
 				</div>
 			</div>
 		</div>
+		<button
+			class="btn"
+			onclick="replaceWithHTML('spa-replacement', './pages/test.html')"
+		>
+			replace the "hello" with "test"!
+		</button>
 		<div id="spa-replacement">hello</div>
 		<script>
-			document.getElementById("spa-replacement").innerHTML =
-				'<object type="text/html" data="./pages/test.html"></object>';
+			let replaceWithHTML = (id, htmlFileLocation) => {
+				let htmlData;
+				fetch(htmlFileLocation)
+					.then((response) => response.text())
+					.then((data) => {
+						document.getElementById(id).innerHTML = data;
+					});
+			};
 		</script>
 		<div id="app"></div>
 		<script type="module" src="/main.js"></script>
