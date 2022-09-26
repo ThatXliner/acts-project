@@ -19,7 +19,7 @@ export function switchPage(sID) {
         .getElementById("sidebarUl")
         .children[currentPageNum].classList.add("btn-active");
     });
-  fetch("pageScripts/" + sID + ".js")
+  fetch("scripts/" + sID + ".js")
     .then((response) => response.text())
     .then((data) => {
       // Safer than eval, also faster.
