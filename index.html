@@ -1,93 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Vite App</title>
-		<link rel="stylesheet" href="style.css" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
-		<script type="module">
-		window.$store = {
-				currentPage: 0,
-				pages: [
-					{
-						title: "The Ascension",
-						sID: "acts1_3",
-					},
-					{
-						title: "A New Leader",
-						sID: "acts6",
-					},
-					{
-						title: "Saul's Conversion",
-						sID: "acts7_9",
-					},
-					{
-						title: "The Church",
-						sID: "acts10_15",
-					},
-					{
-						title: "Paul's Travels",
-						sID: "acts16_21",
-					},
-					{
-						title: "Paul's Arrest",
-						sID: "acts22_25",
-					},
-					{
-						title: "The End",
-						sID: "acts26_27",
-					},
-				],
-		};
-		</script>
-		<script type="module" src="src/setup.js"></script>
-	</head>
-	<body>
-		<div class="navbar bg-primary">
-			<div class="navbar-start">
-				<label for="drawer" class="btn btn-ghost btn-circle lg:hidden"
-					><svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="h-5 w-5"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M4 6h16M4 12h16M4 18h7"
-						/></svg
-				></label>
-			</div>
-			<div class="navbar-center">
-				<a class="btn btn-ghost normal-case text-xs">Acts 1-2</a>
-				<a class="btn btn-outline normal-case text-xl mx-3">Acts 3-10</a>
-				<a class="btn btn-ghost normal-case text-xs">Acts 11-20</a>
-			</div>
-			<div class="navbar-end">The Acts Project</div>
-		</div>
-		<div class="drawer drawer-mobile">
-			<input id="drawer" type="checkbox" class="drawer-toggle" />
-			<div class="drawer-content">
-				<main id="main">
-					<a class="btn" goto="acts1_3"> Move to acts 1-3! </a>
-				</main>
-			</div>
-			<div class="drawer-side">
-				<label for="drawer" class="drawer-overlay"></label>
-				<ul
-					class="menu p-4 overflow-y-auto w-80 bg-neutral text-primary"
-					id="sidebarUl"
-				>
-					<!-- Sidebar content here -->
-				</ul>
-			</div>
-		</div>
-
-
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script type="module">
+      window.$store = {
+        currentPage: 0,
+        pages: [
+          {
+            title: "The Ascension",
+            sID: "acts1_3",
+          },
+          {
+            title: "A New Leader",
+            sID: "acts6",
+          },
+          {
+            title: "Saul's Conversion",
+            sID: "acts7_9",
+          },
+          {
+            title: "The Church",
+            sID: "acts10_15",
+          },
+          {
+            title: "Paul's Travels",
+            sID: "acts16_21",
+          },
+          {
+            title: "Paul's Arrest",
+            sID: "acts22_25",
+          },
+          {
+            title: "The End",
+            sID: "acts26_27",
+          },
+        ],
+      };
+    </script>
+    <script type="module" src="src/setup.js"></script>
+  </head>
+  <body>
+    <div class="navbar bg-primary">
+      <div class="navbar-start">
+        <label for="drawer" class="btn btn-ghost btn-circle lg:hidden"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h7"
+            /></svg
+        ></label>
+      </div>
+      <div class="navbar-center">
+        <a class="btn btn-ghost normal-case text-xs">Acts 1-2</a>
+        <a class="btn btn-outline normal-case text-xl mx-3">Acts 3-10</a>
+        <a class="btn btn-ghost normal-case text-xs">Acts 11-20</a>
+      </div>
+      <div class="navbar-end">The Acts Project</div>
+    </div>
+    <div class="drawer drawer-mobile">
+      <input id="drawer" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-content">
+        <main id="main">
+          <a class="btn" goto="acts1_3"> Move to acts 1-3! </a>
+        </main>
+      </div>
+      <div class="drawer-side">
+        <label for="drawer" class="drawer-overlay"></label>
+        <ul
+          class="menu p-4 overflow-y-auto w-80 bg-neutral text-primary"
+          id="sidebarUl"
+        >
+          <!-- Sidebar content here -->
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>
