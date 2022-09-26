@@ -21,6 +21,18 @@ export function switchPage(sID) {
         .getElementById("sidebarUl")
         .children[currentPageNum].classList.add("btn-active");
       $store.currentPage = currentPageNum;
+      // modify navbar
+      document.getElementById("navbar-left").innerText =
+        $store.currentPage == 0
+          ? ""
+          : parseSID($store.pages[$store.currentPage - 1].sID);
+      document.getElementById("navbar-active").innerText = parseSID(
+        $store.pages[$store.currentPage].sID
+      );
+      document.getElementById("navbar-right").innerText =
+        $store.currentPage == $store.pages.length - 1
+          ? ""
+          : parseSID($store.pages[$store.currentPage + 1].sID);
       return fetch("scripts/" + sID + ".js");
     })
     .then((response) => response.text())
