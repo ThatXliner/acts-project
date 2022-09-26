@@ -2,7 +2,7 @@
 const SID_MAP = Object.fromEntries($store.pages.map((x, i) => [x.sID, i]));
 
 export function switchPage(sID) {
-  if (!sID in SID_MAO) {
+  if (!sID in SID_MAP) {
     console.error("Please input valid sID to switch to. Action aborted.");
     return;
   }
