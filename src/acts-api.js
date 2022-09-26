@@ -1,8 +1,11 @@
-let switchPage = (sID) => {
+/// For the SPA
+const sIDarr = Object.fromEntries($store.pages.map((x, i) => [x.sID, i]));
+
+export function switchPage(sID) {
   document
     .getElementById("sidebarUl")
-    .children[mainJSON.currentPage].classList.remove("btn-active");
-  let currentPageNum = sIDarr.indexOf(sID);
+    .children[$store.currentPage].classList.remove("btn-active");
+  let currentPageNum = sIDarr[sID];
   if (currentPageNum == -1) {
     console.error("Please input valid sID to switch to. Action aborted.");
     return;
@@ -10,15 +13,21 @@ let switchPage = (sID) => {
   fetch("pages/" + sID + ".html")
     .then((response) => response.text())
     .then((data) => {
-      mainJSON.currentPage = currentPageNum;
+      $store.currentPage = currentPageNum;
       document.getElementById("main").innerHTML = data;
       document
         .getElementById("sidebarUl")
         .children[currentPageNum].classList.add("btn-active");
     });
-};
+  fetch("pageScripts/" + sID + ".js")
+    .then((response) => response.text())
+    .then((data) => {
+      // Safer than eval, also faster.
+      Function(data)();
+    });
+}
 
-let parseSID = (sID) => {
+export function parseSID(sID) {
   let finishedSID = sID.slice(4, sID.length);
   if (finishedSID.length == 1) {
     return "Acts " + finishedSID;
@@ -26,4 +35,4 @@ let parseSID = (sID) => {
     let startEnd = finishedSID.split("_");
     return "Acts " + startEnd[0] + "-" + startEnd[1];
   }
-};
+}

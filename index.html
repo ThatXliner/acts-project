@@ -1,11 +1,48 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="actsTheme">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Vite App</title>
 		<link rel="stylesheet" href="style.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+		<script type="module">
+		window.$store = {
+				currentPage: 0,
+				pages: [
+					{
+						title: "The Ascension",
+						sID: "acts1_3",
+					},
+					{
+						title: "A New Leader",
+						sID: "acts6",
+					},
+					{
+						title: "Saul's Conversion",
+						sID: "acts7_9",
+					},
+					{
+						title: "The Church",
+						sID: "acts10_15",
+					},
+					{
+						title: "Paul's Travels",
+						sID: "acts16_21",
+					},
+					{
+						title: "Paul's Arrest",
+						sID: "acts22_25",
+					},
+					{
+						title: "The End",
+						sID: "acts26_27",
+					},
+				],
+		};
+		</script>
+		<script type="module" src="src/setup.js"></script>
 	</head>
 	<body>
 		<div class="navbar bg-primary">
@@ -38,13 +75,12 @@
 			<div class="drawer-content">
 				<main id="main">
 					<a class="btn" goto="acts1_3"> Move to acts 1-3! </a>
-					<div id="spa-replacement">hello</div>
 				</main>
 			</div>
 			<div class="drawer-side">
 				<label for="drawer" class="drawer-overlay"></label>
 				<ul
-					class="menu p-4 overflow-y-auto w-80 bg-neutral text-base-content text-primary"
+					class="menu p-4 overflow-y-auto w-80 bg-neutral text-primary"
 					id="sidebarUl"
 				>
 					<!-- Sidebar content here -->
@@ -52,8 +88,6 @@
 			</div>
 		</div>
 
-		<script src="src/acts-api.js"></script>
-		<script src="src/setup.js"></script>
-		<script src="src/main.js"></script>
+
 	</body>
 </html>
