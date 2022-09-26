@@ -14,17 +14,15 @@ export function switchPage(sID) {
 			// change "page" contents
 			document.getElementById("main").innerHTML = data;
 			// modify sidebar
-      console.log($store.currentPage)
-      console.log(currentPageNum)
 			document
 				.getElementById("sidebarUl")
 				.children[$store.currentPage].classList.remove("btn-active");
 			document
 				.getElementById("sidebarUl")
 				.children[currentPageNum].classList.add("btn-active");
-      $store.currentPage = currentPageNum;
-		});
-	fetch("scripts/" + sID + ".js")
+                        $store.currentPage = currentPageNum;
+		        return fetch("scripts/" + sID + ".js")
+		})
 		.then((response) => response.text())
 		.then((data) => {
 			// Safer than eval; also faster.
