@@ -4,7 +4,7 @@ export class SpaLink extends HTMLParagraphElement {
   constructor() {
     super();
     this.innerHTML = `<a>${this.innerHTML}</a>`
-    this.querySelector("a").onclick = (event) {
+    this.querySelector("a").onclick = (event) => {
       event.preventDefault();
       switchPage(this.getAttribute('to'));
     }
