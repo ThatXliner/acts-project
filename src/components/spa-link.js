@@ -1,6 +1,6 @@
 import { switchPage } from '../acts-api.js';
 
-class SpaLink extends HTMLParagraphElement {
+export class SpaLink extends HTMLParagraphElement {
   constructor() {
     super();
     this.innerHTML = `<a>${this.innerHTML}</a>`
