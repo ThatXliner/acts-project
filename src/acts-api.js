@@ -33,34 +33,25 @@ export function switchPage(sID) {
 	let navbarPrev = document.getElementById("navbarPrev");
 	let navbarNow = document.getElementById("navbarNow");
 	let navbarNext = document.getElementById("navbarNext");
-	function swap(json) {
-		var ret = {};
-		for (var key in json) {
-			ret[json[key]] = key;
-		}
-		return ret;
-	}
-
-	let invSID_MAP = swap(SID_MAP);
-	console.log(invSID_MAP);
-	if (currentPageNum == (Object.entries(invSID_MAP).length-1)) {
-		navbarNext.innerHTML = parseSID(invSID_MAP[0]);
-		navbarNext.setAttribute('goto',invSID_MAP[0])
-		navbarPrev.innerHTML = parseSID(invSID_MAP[currentPageNum - 1]);
-		navbarPrev.setAttribute('goto',invSID_MAP[currentPageNum - 1])
+	let pages = window.$store.pages
+	if (currentPageNum == (pages.length-1)) {
+		navbarNext.innerHTML = parseSID(pages[0].sID);
+		navbarNext.setAttribute('goto',pages[0].sID)
+		navbarPrev.innerHTML = parseSID(pages[currentPageNum - 1].sID);
+		navbarPrev.setAttribute('goto',pages[currentPageNum - 1].sID)
 	} else if (currentPageNum == 0) {
-		navbarPrev.innerHTML = parseSID(invSID_MAP[Object.entries(invSID_MAP).length - 1]);
-		navbarPrev.setAttribute('goto',invSID_MAP[Object.entries(invSID_MAP).length - 1]);
-		navbarNext.innerHTML = parseSID(invSID_MAP[currentPageNum + 1]);
-		navbarNext.setAttribute('goto',invSID_MAP[currentPageNum + 1]);
+		navbarPrev.innerHTML = parseSID(pages[pages.length - 1].sID);
+		navbarPrev.setAttribute('goto',pages[pages.length - 1].sID);
+		navbarNext.innerHTML = parseSID(pages[currentPageNum + 1].sID);
+		navbarNext.setAttribute('goto',pages[currentPageNum + 1].sID);
 	} else {
-		navbarPrev.innerHTML = parseSID(invSID_MAP[currentPageNum - 1]);
-		navbarPrev.setAttribute('goto',invSID_MAP[currentPageNum- 1])
-		navbarNext.innerHTML = parseSID(invSID_MAP[currentPageNum + 1]);
-		navbarNext.setAttribute('goto',invSID_MAP[currentPageNum + 1]);
+		navbarPrev.innerHTML = parseSID(pages[currentPageNum - 1].sID);
+		navbarPrev.setAttribute('goto',pages[currentPageNum- 1].sID)
+		navbarNext.innerHTML = parseSID(pages[currentPageNum + 1].sID);
+		navbarNext.setAttribute('goto',pages[currentPageNum + 1].sID);
 	}
-	navbarNow.innerHTML = parseSID(invSID_MAP[currentPageNum]);
-	navbarNow.setAttribute('goto',invSID_MAP[currentPageNum]);
+	navbarNow.innerHTML = parseSID(pages[currentPageNum].sID);
+	navbarNow.setAttribute('goto',pages[currentPageNum].sID);
 }
 switchPage("acts1_3");
 export function parseSID(sID) {
