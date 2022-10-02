@@ -12,6 +12,10 @@
         currentPage: 0,
         pages: [
           {
+            title: "What is the Acts Project?",
+            sID: "intro",
+          },
+          {
             title: "The Ascension",
             sID: "acts1_3",
           },
@@ -39,9 +43,15 @@
             title: "The End",
             sID: "acts26_27",
           },
+          {
+            title: "Jesus is the way",
+            sID: "conclusion",
+          },
         ],
       };
     </script>
+    <!-- Web Components -->
+    <script type="module" src="src/components/spa-link.js"></script>
     <script type="module" src="src/setup.js"></script>
   </head>
   <body>
@@ -50,31 +60,59 @@
         <label for="drawer" class="btn btn-ghost btn-circle lg:hidden"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
             fill="none"
             viewBox="0 0 24 24"
+            stroke-width="1.5"
             stroke="currentColor"
+            class="w-6 h-6"
           >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h7"
-            /></svg
-        ></label>
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </label>
       </div>
       <div class="navbar-center">
-        <a class="btn btn-ghost normal-case text-xs">Acts 1-2</a>
-        <a class="btn btn-outline normal-case text-xl mx-3">Acts 3-10</a>
-        <a class="btn btn-ghost normal-case text-xs">Acts 11-20</a>
+        <spa-link
+          id="navbar-left"
+          class="btn btn-ghost normal-case text-xs"
+          to="acts26_27"
+        ></spa-link>
+        <spa-link
+          id="navbar-active"
+          class="btn btn-neutral normal-case text-xl mx-3"
+          to="acts1_3"
+        ></spa-link>
+        <spa-link
+          id="navbar-right"
+          class="btn btn-ghost normal-case text-xs"
+          to="acts6"
+        ></spa-link>
       </div>
-      <div class="navbar-end">The Acts Project</div>
+      <div class="navbar-end">
+        <a href="https://github.com/ThatXliner/acts-project"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              fill-rule="evenodd"
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385c.6.105.825-.255.825-.57c0-.285-.015-1.23-.015-2.235c-3.015.555-3.795-.735-4.035-1.41c-.135-.345-.72-1.41-1.23-1.695c-.42-.225-1.02-.78-.015-.795c.945-.015 1.62.87 1.845 1.23c1.08 1.815 2.805 1.305 3.495.99c.105-.78.42-1.305.765-1.605c-2.67-.3-5.46-1.335-5.46-5.925c0-1.305.465-2.385 1.23-3.225c-.12-.3-.54-1.53.12-3.18c0 0 1.005-.315 3.3 1.23c.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23c.66 1.65.24 2.88.12 3.18c.765.84 1.23 1.905 1.23 3.225c0 4.605-2.805 5.625-5.475 5.925c.435.375.81 1.095.81 2.22c0 1.605-.015 2.895-.015 3.3c0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z"
+              clip-rule="evenodd"
+            /></svg
+        ></a>
+      </div>
     </div>
     <div class="drawer drawer-mobile">
       <input id="drawer" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content">
         <main id="main">
-          <a class="btn" goto="acts1_3"> Move to acts 1-3! </a>
+          <!-- For SPA -->
         </main>
       </div>
       <div class="drawer-side">
@@ -83,7 +121,7 @@
           class="menu p-4 overflow-y-auto w-80 bg-neutral text-primary"
           id="sidebarUl"
         >
-          <!-- Sidebar content here -->
+          <!-- Sidebar content here (dynamically generated) -->
         </ul>
       </div>
     </div>

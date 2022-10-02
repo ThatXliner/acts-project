@@ -21,6 +21,29 @@ export function switchPage(sID) {
         .getElementById("sidebarUl")
         .children[currentPageNum].classList.add("btn-active");
       $store.currentPage = currentPageNum;
+      // modify navbar (with loopback)
+      document
+        .getElementById("navbar-left")
+        .setAttribute(
+          "to",
+          ($store.currentPage == 0
+            ? $store.pages[$store.pages.length - 2]
+            : $store.pages[$store.currentPage - 1]
+          ).sID
+        );
+      document
+        .getElementById("navbar-active")
+        .setAttribute("to", $store.pages[$store.currentPage].sID);
+      document
+        .getElementById("navbar-right")
+        .setAttribute(
+          "to",
+          ($store.currentPage == $store.pages.length - 1
+            ? $store.pages[1]
+            : $store.pages[$store.currentPage + 1]
+          ).sID
+        );
+
       return fetch("scripts/" + sID + ".js");
     })
     .then((response) => response.text())
@@ -31,11 +54,15 @@ export function switchPage(sID) {
 }
 
 export function parseSID(sID) {
-  let finishedSID = sID.slice(4, sID.length);
-  if (finishedSID.length == 1) {
-    return "Acts " + finishedSID;
+  if (sID.includes("acts")) {
+    let finishedSID = sID.slice(4, sID.length);
+    if (finishedSID.length == 1) {
+      return "Acts " + finishedSID;
+    } else {
+      let startEnd = finishedSID.split("_");
+      return "Acts " + startEnd[0] + "-" + startEnd[1];
+    }
   } else {
-    let startEnd = finishedSID.split("_");
-    return "Acts " + startEnd[0] + "-" + startEnd[1];
+    return sID.charAt(0).toUpperCase() + sID.slice(1);
   }
 }
