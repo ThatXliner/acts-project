@@ -14,3 +14,6 @@ document.querySelectorAll("[goto]").forEach(function (el) {
     switchPage(el.getAttribute("goto"));
   };
 });
+
+// Initialize pages
+switchPage("acts1_3");
