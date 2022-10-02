@@ -27,7 +27,6 @@ export class SpaLink extends HTMLElement {
 		this.onclick = (event) => {
 			event.preventDefault();
 			if (this.getAttribute("to") !== $store.pages[$store.currentPage].sID) {
-				console.log("hi");
 				switchPage(this.getAttribute("to"));
 			}
 		};
