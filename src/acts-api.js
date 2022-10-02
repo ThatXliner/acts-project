@@ -27,7 +27,7 @@ export function switchPage(sID) {
 				.setAttribute(
 					"to",
 					($store.currentPage == 0
-						? $store.pages[$store.pages.length - 1]
+						? $store.pages[$store.pages.length - 2]
 						: $store.pages[$store.currentPage - 1]
 					).sID
 				);
@@ -39,7 +39,7 @@ export function switchPage(sID) {
 				.setAttribute(
 					"to",
 					($store.currentPage == $store.pages.length - 1
-						? $store.pages[0]
+						? $store.pages[1]
 						: $store.pages[$store.currentPage + 1]
 					).sID
 				);
