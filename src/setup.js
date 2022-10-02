@@ -2,18 +2,11 @@ import { parseSID, switchPage } from "./acts-api.js";
 // set up side bar
 document.getElementById("sidebarUl").innerHTML = $store.pages
   .map((x) => {
-    return `<li><a goto=${x.sID}><b>${parseSID(x.sID)}:</b> ${
+    return `<li><spa-link to=${x.sID}><b>${parseSID(x.sID)}:</b> ${
       x.title
-    }</a></li>`;
+    }</spa-link></li>`;
   })
   .join("");
-// set up spa
-document.querySelectorAll("[goto]").forEach(function (el) {
-  el.onclick = (event) => {
-    event.preventDefault();
-    switchPage(el.getAttribute("goto"));
-  };
-});
 
-// Initialize pages
-switchPage("acts1_3");
+// Initial page switch
+switchPage($store.pages[$store.currentPage].sID);
