@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .drawer {
   height: 91vh;
+}
+
+#main {
+  height: 1vh;
 }
