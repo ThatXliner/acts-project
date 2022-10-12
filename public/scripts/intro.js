@@ -57,6 +57,17 @@ gsap.from("#vite-logo", {
   duration: 1,
   ease: "out",
 });
+gsap.from("#pfp", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: "#pfp",
+  },
+  alpha: 0,
+  y: -50,
+  stagger: 0.1,
+  duration: 0.75,
+  ease: "out",
+});
 gsap.from("#greensock-logo", {
   scrollTrigger: {
     scroller: ".drawer-content",
