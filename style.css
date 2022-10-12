@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.drawer {
-  height: 91vh;
+html {
+  overflow: hidden;
+}
+
+.main {
+  overflow: hidden;;
 }
 
 #main {
