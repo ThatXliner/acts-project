@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-html {
-  overflow: hidden;
+.drawer {
+  height: 91vh;
 }
