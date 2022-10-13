@@ -9,8 +9,8 @@ gsap.from(".acts-project", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".acts-project",
-    start: "0px 100px",
-    end: "100px 150px",
+    start: "top 25%",
+    end: "+=150px",
     scrub: true,
   },
   alpha: 0,
