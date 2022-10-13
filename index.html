@@ -10,8 +10,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/MotionPathPlugin.min.js"></script>
     <script type="module">
-      gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
-
       window.$store = {
         currentPage: 0,
         pages: [
@@ -54,9 +52,9 @@
         ],
       };
     </script>
+    <script type="module" src="src/setup.js"></script>
     <!-- Web Components -->
     <script type="module" src="src/components/spa-link.js"></script>
-    <script type="module" src="src/setup.js"></script>
   </head>
   <body>
     <div class="navbar bg-primary">
