@@ -1,5 +1,40 @@
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.from("#acts1-logo", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: "#acts1-logo",
+  },
+  alpha: 0,
+  x: -100,
+  y: -100,
+  duration: 1,
+  ease: "out",
+});
+
+gsap.from("#chapter-logo", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: "#chapter-logo",
+  },
+  alpha: 0,
+  x: 100,
+  y: 100,
+  duration: 1,
+  ease: "out",
+});
+
+gsap.from(".wall", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".wall",
+  },
+  alpha: 0,
+  y: 800,
+  duration: 5,
+  ease: "out",
+});
+
 gsap.to(".disciples", {
   scrollTrigger: {
     scroller: ".drawer-content",
@@ -25,7 +60,7 @@ gsap.to(".angel1", {
     start: "5% 15%",
   },
   x: 500,
-  rotation: 500,
+  rotation: 340,
   ease: "none",
   duration: 2,
 });
@@ -39,8 +74,8 @@ gsap.to(".angel2", {
     pin: true,
     start: "5% 15%",
   },
-  x: -700,
-  rotation: 820,
+  x: -500,
+  rotation: -340,
   ease: "none",
   duration: 2,
 });
