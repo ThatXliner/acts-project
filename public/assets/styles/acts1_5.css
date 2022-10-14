@@ -10,7 +10,7 @@
   
   .jesus {
     display: block;
-    background-image: url(/images/jesus.jpg);
+    background-image: url(../images/jesus.jpg);
     background-repeat: no-repeat;
     width: 200px;
     height: 300px;
@@ -21,7 +21,7 @@
   
   .disciples {
     display: block;
-    background-image: url(/images/disciples.jpg);
+    background-image: url(../images/disciples.jpg);
     background-repeat: no-repeat;
     width: 200px;
     height: 300px;
@@ -41,7 +41,7 @@
   
   .angel1 {
     display: block;
-    background-image: url(/images/angel.jpg);
+    background-image: url(../images/angel.jpg);
     background-repeat: no-repeat;
     width: 200px;
     height: 300px;
@@ -54,7 +54,7 @@
   
   .angel2 {
     display: block;
-    background-image: url(/images/angel.jpg);
+    background-image: url(../images/angel.jpg);
     background-repeat: no-repeat;
     width: 200px;
     height: 300px;
