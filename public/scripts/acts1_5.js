@@ -24,8 +24,8 @@ gsap.to(".angel1", {
     pin: true,
     start: "5% 15%",
   },
-  x: 400,
-  rotation: 350,
+  x: 500,
+  rotation: 500,
   ease: "none",
   duration: 2,
 });
@@ -39,8 +39,8 @@ gsap.to(".angel2", {
     pin: true,
     start: "5% 15%",
   },
-  x: -400,
-  rotation: -350,
+  x: -700,
+  rotation: 820,
   ease: "none",
   duration: 2,
 });
