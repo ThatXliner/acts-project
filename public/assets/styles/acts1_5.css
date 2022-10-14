@@ -1,65 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #fdfdfd, #ebedee 70%);
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text {
+  background: linear-gradient(90deg, #00dbde, #fc00ff);
+  font-size: 120px;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .panel {
-    width: 100%;
-    height:100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-  
-  }
-  
-  .jesus {
-    display: block;
-    background-image: url(../images/jesus.jpg);
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 300px;
-    margin-top: 5%;
-    margin-left: 35%;
-    margin-right: 65%;
-  }
-  
-  .disciples {
-    display: block;
-    background-image: url(../images/disciples.jpg);
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 300px;
-    margin-top: -8%;
-    margin-left: 50%;
-    margin-right: 50%;
-  }
-  
-  
-  .center {
-    display: block;
-    margin-left: 35%;
-    margin-right: 65%;
-    margin-top: 60%;
-  }
-  
-  
-  .angel1 {
-    display: block;
-    background-image: url(../images/angel.jpg);
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 300px;
-    background-size: 100%;
-    margin-left: -15%;
-    margin-right: 115%;
-    margin-top: -70%;
-  }
-  
-  
-  .angel2 {
-    display: block;
-    background-image: url(../images/angel.jpg);
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 300px;
-    background-size: 100%;
-    margin-left: 105%;
-    margin-right: -5%;
-    margin-top: -45%;
-  }
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.jesus {
+  display: block;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 300px;
+  margin-top: 5%;
+  margin-left: 35%;
+  margin-right: 65%;
+}
+
+.disciples {
+  display: block;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 175px;
+  margin-top: -8%;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
+.center-jesus {
+  display: block;
+  margin-left: 35%;
+  margin-right: 65%;
+  margin-top: 60%;
+}
+
+.center-acts {
+  display: block;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: -8.5%;
+}
+
+.center-1-5 {
+  display: block;
+  margin-left: 47%;
+  margin-right: 15%;
+  margin-top: -8.5%;
+}
+
+.angel1 {
+  display: block;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 300px;
+  background-size: 100%;
+  margin-left: -15%;
+  margin-right: 115%;
+  margin-top: -70%;
+}
+
+.angel2 {
+  display: block;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 300px;
+  background-size: 100%;
+  margin-left: 105%;
+  margin-right: -5%;
+  margin-top: -45%;
+}
+
+.holy-spirit {
+  margin-left: 35%;
+  margin-right: 65%;
+  margin-top: 70%;
+  width: 400px;
+  height: auto;
+}
+
+.matthias {
+  margin-left: 2%;
+  margin-right: 98%;
+  margin-top: 70%;
+  margin-bottom: 10%;
+  width: 200px;
+  height: auto;
+}
+
+.wall {
+  margin-left: 20%;
+  margin-right: 80%;
+  margin-top: -30%;
+  margin-bottom: 10%;
+  width: 350px;
+  height: auto;
+}
+
+.priest {
+  margin-left: 60%;
+  margin-right: 40%;
+  margin-top: -30%;
+  margin-bottom: 10%;
+  width: 350px;
+  height: auto;
+}
