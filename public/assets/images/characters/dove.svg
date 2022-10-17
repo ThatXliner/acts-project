@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 532.61 425.412" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="320.55" id="Filter" width="418.122" x="46.6567" y="68.5916">
+<feDropShadow dx="-0.160051" dy="0.24267" flood-color="#020202" flood-opacity="0.677928" in="SourceGraphic" result="Shadow" stdDeviation="16.3275"/>
+</filter>
+</defs>
+<g id="Layer-1" vectornator:layerName="Layer 1">
+<path d="M269.004 245.637C314.59 276.201 371.264 269.637 403.405 232.831C436.825 194.562 425.512 141.343 385.736 103.525L269.004 245.637Z" fill="#b8b8b8" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M159.191 101.004C115.173 101.004 79.4718 136.705 79.4718 180.723C79.4718 224.74 115.173 260.41 159.191 260.41C164.748 260.41 170.172 259.837 175.409 258.754C195.754 315.229 245.05 353.701 302.191 356.129C375.671 359.251 425.557 298.291 432.284 219.129L230.253 216.66C235.732 205.85 238.878 193.671 238.878 180.723C238.878 136.705 203.208 101.004 159.191 101.004Z" fill="#ffffff" fill-rule="nonzero" filter="url(#Filter)" stroke="none" vectornator:shadowAngle="2.15385" vectornator:shadowColor="#020202" vectornator:shadowOffset="0.290698" vectornator:shadowOpacity="0.677928" vectornator:shadowRadius="32.655"/>
+<path d="M244.4 289.267C298.053 300.828 348.292 273.791 364.562 227.716C381.48 179.807 351.306 134.532 300.374 114.084L244.4 289.267Z" fill="#dcdcdc" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M104.838 173.836C104.838 166.092 110.045 159.815 116.468 159.815C122.89 159.815 128.097 166.092 128.097 173.836C128.097 181.58 122.89 187.858 116.468 187.858C110.045 187.858 104.838 181.58 104.838 173.836Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="none"/>
+<path d="M49.3265 212.613L92.0263 194.559L99.811 223.431L49.3265 212.613Z" fill="#ffc47f" fill-rule="nonzero" opacity="1" stroke="none"/>
+</g>
+</svg>
