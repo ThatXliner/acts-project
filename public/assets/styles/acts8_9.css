@@ -16,6 +16,12 @@
     width: 25%;
     right: 5%;
 }
+.words4 {
+    position: absolute;
+    top: 180%;
+    width: 25%;
+    right: 5%;
+}
 
 .apostle {
     margin-right: 200px;
@@ -36,4 +42,12 @@
 .title2 {
     position: absolute;
     top: 140%;
+}
+
+#scene2 {
+    position: absolute;
+    top: 140%;
+}
+
+.paul {
 }

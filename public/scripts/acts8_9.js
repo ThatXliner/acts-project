@@ -17,6 +17,17 @@ gsap.to("#scene1", {
     pinSpacing: "false",
   },
 });
+gsap.to("#scene2", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: "#scene2",
+    pin: "#scene2",
+    start: "-50px 0",
+    end: "1200px start",
+    pinSpacing: "false",
+    markers: true,
+  },
+});
 gsap.from(".dove", {
   scrollTrigger: {
     scroller: ".drawer-content",
@@ -38,7 +49,7 @@ gsap.from(".simon", {
     start: "200px 0",
     end: "500px start",
   },
-//   immediateRender: false,
+  //   immediateRender: false,
   alpha: 0,
   y: 200,
 });
