@@ -1,0 +1,39 @@
+.words1 {
+    position: absolute;
+    top: 70%;
+    width: 25%;
+    right: 5%;
+}
+.words2 {
+    position: absolute;
+    top: 100%;
+    width: 25%;
+    right: 5%;
+}
+.words3 {
+    position: absolute;
+    top: 120%;
+    width: 25%;
+    right: 5%;
+}
+
+.apostle {
+    margin-right: 200px;
+}
+
+.dove {
+    position: absolute;
+    left: 45%;
+    top: 20%;
+}
+
+.simon {
+    position: absolute;
+    bottom: -15%;
+    left: 26%;   
+}
+
+.title2 {
+    position: absolute;
+    top: 140%;
+}
