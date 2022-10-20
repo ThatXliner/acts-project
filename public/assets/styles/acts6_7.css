@@ -1,3 +1,12 @@
-main > div {
+main > .spacer {
   margin: 100%;
+}
+
+/* main > .rock {
+  padding-top: 100px;
+  padding-left: 510px;
+} */
+main > #rockPath {
+  stroke-width: 2;
+  stroke: gray;
 }
