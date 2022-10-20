@@ -41,8 +41,10 @@ gsap.to(".disciples", {
     trigger: ".disciples",
     scrub: true,
     markers: true,
-    pin: true,
-    start: "30% 75%",
+    pin: ".disciples",
+    start: "-500px 0",
+    end: "300px start",
+    pinSpacing: "false",
   },
   x: 40,
   rotation: 35,
@@ -50,32 +52,47 @@ gsap.to(".disciples", {
   duration: 2,
 });
 
-gsap.to(".angel1", {
+gsap.from(".angel1", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".angel1",
     scrub: 1,
     markers: true,
     pin: true,
-    start: "5% 15%",
   },
-  x: 500,
-  rotation: 340,
-  ease: "none",
-  duration: 2,
+  x: -500,
 });
 
-gsap.to(".angel2", {
+gsap.from(".angel2", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".angel2",
     scrub: 1,
     markers: true,
     pin: true,
-    start: "5% 15%",
   },
-  x: -500,
-  rotation: -340,
-  ease: "none",
-  duration: 2,
+  x: -550,
+});
+
+gsap.from(".words2", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".words2",
+    scrub: 1,
+    markers: true,
+    pin: true,
+  },
+  x: 600,
+});
+
+gsap.to(".disciples", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".disciples",
+    markers: true,
+    pin: ".disciples",
+    start: "-500px 0",
+    end: "1000px start",
+    pinSpacing: "false",
+  },
 });
