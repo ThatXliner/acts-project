@@ -1,12 +1,15 @@
-main > .spacer {
-  margin: 100%;
-}
-
-/* main > .rock {
-  padding-top: 100px;
-  padding-left: 510px;
-} */
-main > #rockPath {
+main path {
   stroke-width: 2;
   stroke: gray;
+}
+#hbar {
+  height: 2rem;
+  background-color: red;
+  margin-left: 1rem;
+  margin-right: 50px;
+  border-radius: 20px;
+}
+.pinme {
+  padding-top: 10px;
+  height: fit-content;
 }
