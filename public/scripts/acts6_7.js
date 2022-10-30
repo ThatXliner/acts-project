@@ -19,7 +19,7 @@ let rockContacts = [];
 function animateRock(number, start, end) {
   rockContacts.push(end);
   gsap.to(`#rock-${number}`, {
-    motionPath: `#rock-path-${1}`,
+    motionPath: `#rock-path-${number}`,
     scrollTrigger: {
       scroller: ".drawer-content",
       trigger: "#rocks",
@@ -29,7 +29,6 @@ function animateRock(number, start, end) {
       markers: { startColor: "blue", endColor: "purple", fontSize: "12px" },
     },
   });
-  MotionPathHelper.create("#rock-1");
 }
 
 animateRock(1, 5, 70);
