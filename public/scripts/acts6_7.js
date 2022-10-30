@@ -6,14 +6,6 @@ gsap.to("#header", {
     pin: true,
   },
 });
-// gsap.to(".pinme", {
-//   scrollTrigger: {
-//     scroller: ".drawer-content",
-//     trigger: "#header",
-//     end: "+=100px",
-//   },
-//   opacity: 100,
-// });
 gsap.to(".pinme", {
   scrollTrigger: {
     scroller: ".drawer-content",
@@ -37,6 +29,7 @@ function animateRock(number, start, end) {
       markers: { startColor: "blue", endColor: "purple", fontSize: "12px" },
     },
   });
+  MotionPathHelper.create("#rock-1");
 }
 
 animateRock(1, 5, 70);
