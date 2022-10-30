@@ -27,3 +27,8 @@ svg {
   position: fixed;
   display: hidden;
 }
+.stephen {
+  position: absolute;
+  left: 0px;
+  top: 100px;
+}
