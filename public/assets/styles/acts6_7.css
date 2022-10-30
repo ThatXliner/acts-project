@@ -3,13 +3,27 @@ main path {
   stroke: gray;
 }
 #hbar {
+  -webkit-appearance: none;
+  appearance: none;
   height: 2rem;
+  border-radius: 20px;
+  border-width: 3px;
   background-color: red;
-  margin-left: 1rem;
-  margin-right: 50px;
+  border-color: gray;
+  width: 100%;
+}
+::-webkit-progress-value {
+  background-color: red;
+  border-radius: 20px;
+}
+::-webkit-progress-bar {
   border-radius: 20px;
 }
 .pinme {
-  padding-top: 10px;
+  /* padding-top: 10px; */
   height: fit-content;
+}
+svg {
+  position: fixed;
+  display: hidden;
 }

@@ -22,41 +22,43 @@ gsap.to(".pinme", {
     pin: true,
   },
 });
-gsap.to("#hbar", {
-  scrollTrigger: {
-    scroller: ".drawer-content",
-    trigger: ".pinme",
-    start: "0px 0px",
-    end: "bottom top",
-    scrub: true,
-    markers: true,
-  },
-  width: "0px",
-});
+
+let rockContacts = [];
 function animateRock(number, start, end) {
+  rockContacts.push(end);
   gsap.to(`#rock-${number}`, {
     motionPath: `#rock-path-${1}`,
     scrollTrigger: {
       scroller: ".drawer-content",
-      trigger: ".pinme",
+      trigger: "#rocks",
       start: `${start}px 0px`,
       scrub: true,
-      end: `+=${end}px`,
-      // pin: true,
-      markers: true,
+      end: `${end}px`,
+      markers: { startColor: "blue", endColor: "purple", fontSize: "12px" },
     },
   });
 }
-animateRock(1, 0, 100);
-// gsap.to(".rock-1", {
-//   motionPath: "#rockPath",
-//   scrollTrigger: {
-//     scroller: ".drawer-content",
-//     trigger: ".pinme",
-//     start: "0px 0px",
-//     scrub: true,
-//     end: "+=100px",
-//     // pin: true,
-//     markers: true,
-//   },
-// });
+
+animateRock(1, 5, 70);
+animateRock(2, 0, 100);
+animateRock(3, 18, 140);
+rockContacts.sort((a, b) => {
+  // sort numerically...
+  return a - b;
+});
+
+for (let i = 0; i < rockContacts.length; i++) {
+  let contact = rockContacts[i];
+  gsap.to("#hbar", {
+    scrollTrigger: {
+      scroller: ".drawer-content",
+      trigger: "#rocks",
+      start: `${contact - 10}px 0px`,
+      end: `+=10px`,
+      scrub: true,
+      markers: true,
+    },
+    immediateRender: i == 0,
+    value: 1 - (1 / rockContacts.length) * (i + 1),
+  });
+}
