@@ -2,7 +2,7 @@ import { switchPage, parseSID } from "../acts-api.js";
 /**
  * A web component encapsulating all the SPA
  * event handlers, etc. If you have *any elements
- * in it*, it *will not* dynamically change it's text
+ * in it*, it *will not* dynamically change its text
  *
  * @element spa-link
  * @prop {String} to - The sID of the page you want to switch to
