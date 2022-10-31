@@ -1,3 +1,27 @@
+/**
+ * Returns a random number between min (inclusive) and max (exclusive)
+ */
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+/**
+ * Returns a random integer between min (inclusive) and max (inclusive).
+ * The value is no lower than min (or the next integer greater than min
+ * if min isn't an integer) and no greater than max (or the next integer
+ * lower than max if max isn't an integer).
+ * Using Math.round() will give you a non-uniform distribution!
+ */
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+document.querySelectorAll("#rocks > img").forEach((element) => {
+  element.src = `assets/images/acts6_7/rock-${getRandomInt(1, 3)}.svg`;
+  gsap.set(element, { rotation: getRandomInt(0, 360) });
+});
 gsap.to("#header", {
   scrollTrigger: {
     scroller: ".drawer-content",
@@ -10,7 +34,7 @@ gsap.to(".pinme", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".pinme",
-    end: "max",
+    end: "+=900px",
     pin: true,
   },
 });
@@ -18,7 +42,6 @@ gsap.to(".pinme", {
 let rockContacts = [];
 function animateRock(number, start, end) {
   rockContacts.push(end);
-
   gsap.to(`#rock-${number}`, {
     motionPath: `#rock-path-${number}`,
     scrollTrigger: {
@@ -27,8 +50,8 @@ function animateRock(number, start, end) {
       start: `${start}px 0px`,
       scrub: true,
       end: `${end}px`,
-      // markers: { startColor: "blue", endColor: "purple", fontSize: "12px" },
     },
+    rotation: "random(0, 260)",
   });
 }
 

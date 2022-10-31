@@ -30,13 +30,16 @@ svg {
   position: absolute;
   left: 200px;
   top: 320px;
+  filter: drop-shadow(4px 4px 3px rgba(100, 100, 111, 0.7));
 }
 
 .stephen-dead {
   position: absolute;
   left: 10px;
   top: 500px;
+  filter: drop-shadow(4px 4px 3px rgba(100, 100, 111, 0.7));
 }
 #rocks > img {
   position: absolute;
+  filter: drop-shadow(4px 4px 3px rgba(100, 100, 111, 0.2));
 }
