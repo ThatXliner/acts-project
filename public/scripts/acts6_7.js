@@ -45,36 +45,53 @@ document.querySelectorAll("#rocks > img").forEach((element) => {
   element.src = `assets/images/acts6_7/rock-${getRandomInt(1, 3)}.svg`;
   gsap.set(element, { rotation: getRandomInt(0, 360) });
 });
-// gsap.to(".header", {
+ScrollTrigger.refresh(true); // since we dynamically updated content
+
+gsap.from(".header h1", {
+  x: 100,
+  duration: 0.5,
+});
+gsap.from(".header p", {
+  x: -100,
+  duration: 0.5,
+});
+
+gsap.to(".disciple-choosing", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".disciple-choosing",
+    start: "0px 0px",
+    scrub: true,
+    markers: true,
+  },
+  duration: 0.5,
+  opacity: 0,
+  x: 500,
+});
+
+// gsap.from(".stephen-seized", {
 //   scrollTrigger: {
 //     scroller: ".drawer-content",
-//     trigger: ".header",
-//     end: "+=100px",
-//     pin: true,
+//     trigger: ".disciple-choosing",
+//     start: "center 0px",
+//     scrub: true,
+//     markers: true,
 //   },
+//   duration: 1,
+//   opacity: 0,
+//   x: 10,
 // });
-ScrollTrigger.refresh(true);
+// gsap.to()
+
 gsap.to(".scene-stoning", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".scene-stoning",
-    // start: "+=-100px",
     end: "+=150px",
     pin: true,
     markers: true,
   },
 });
-
-// gsap.to(".scene-stoning", {
-//   scrollTrigger: {
-//     scroller: ".drawer-content",
-//     trigger: ".disciple-choosing",
-//     start: "bottom top",
-//     end: "+=150px",
-//     pin: true,
-//     markers: true,
-//   },
-// });
 
 let rockContacts = [];
 function animateRock(number, start, end) {

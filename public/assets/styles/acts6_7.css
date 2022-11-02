@@ -30,6 +30,7 @@ svg {
 }
 .disciple-choosing .disciples {
   display: flex;
+  justify-content: space-evenly;
 }
 .disciple-choosing .disciples > div {
   text-align: center;
