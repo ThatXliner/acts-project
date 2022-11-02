@@ -1,8 +1,17 @@
-main path {
+/* Helpful for debugging SVG paths */
+path {
   stroke-width: 2;
   stroke: gray;
 }
-#hbar {
+svg {
+  position: fixed;
+  display: none;
+}
+
+/* Since the health bar is implemented using progress
+ * these are some hacks to style it
+*/
+#healthbar > progress {
   -webkit-appearance: none;
   appearance: none;
   height: 2rem;
@@ -19,12 +28,17 @@ main path {
 ::-webkit-progress-bar {
   border-radius: 20px;
 }
-.pinme {
-  height: fit-content;
+.disciple-choosing .disciples {
+  display: flex;
 }
-svg {
-  position: fixed;
-  display: none;
+.disciple-choosing .disciples > div {
+  text-align: center;
+  margin-left: 1em;
+}
+
+/* Every thing related to the scene of stoning Stephen */
+.scene-stoning {
+  height: fit-content;
 }
 .stephen-alive {
   position: absolute;

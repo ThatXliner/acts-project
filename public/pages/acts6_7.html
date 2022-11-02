@@ -1,21 +1,31 @@
 <link rel="stylesheet" href="assets/styles/acts6_7.css" />
 <div>
-  <div>
-    <h1
-      class="text-8xl pl-3 font-bold bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 text-gradient mx-auto"
-      id="header"
-    >
-      Acts 6-7
-    </h1>
-    <p>Stephen gets stoned</p>
-  </div>
-  <scroll-spacer amount="50px"></scroll-spacer>
-  <section class="pinme">
-    <div class="bg-yellow-300 p-3">
+  <section class="header">
+    <div class="pl-3">
+      <h1
+        class="text-8xl font-bold bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 text-gradient mx-auto"
+      >
+        Acts 6-7
+      </h1>
+      <p class="text-5xl">Stephen gets stoned</p>
+    </div>
+  </section>
+
+  <section class="disciple-choosing">
+    <p>
+      The 12 disciples chose 7 men full of the Holy Spirit to help distribute
+      food. That way the rest of the disciples may be able to focus on their
+      ministry
+    </p>
+    <div class="disciples"></div>
+  </section>
+  <!-- <scroll-spacer amount="10px"></scroll-spacer> -->
+  <section class="scene-stoning">
+    <!-- Stoning of Stephen -->
+    <div class="bg-yellow-300 p-3" id="healthbar">
+      <!-- Health bar -->
       <p class="text-mono text-gray-600 pl-2">STEPHEN</p>
-      <progress id="hbar" value="100">
-        <!-- Health bar -->
-      </progress>
+      <progress class="health-bar" value="100"></progress>
     </div>
     <div class="stephen">
       <img

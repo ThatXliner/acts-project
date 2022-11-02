@@ -17,36 +17,73 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+const disciplesContainer = document.querySelector(".disciples");
+let i = 1;
+for (let disciple of [
+  "Stephen",
+  "Philip",
+  "Prochorus",
+  "Nicanor",
+  "Timon",
+  "Parmenas",
+  "Nicolas",
+]) {
+  let div = document.createElement("div");
+  let image = document.createElement("img");
+  let text = document.createElement("p");
+  text.textContent = disciple;
+  image.src = `assets/images/acts6_7/${disciple.toLowerCase()}.svg`;
+  image.width = "100";
+  div.appendChild(text);
+  div.appendChild(image);
+  disciplesContainer.appendChild(div);
+  gsap.from(div, { y: 100, opacity: 0, delay: 0.1 * i });
+  i++;
+}
 
 document.querySelectorAll("#rocks > img").forEach((element) => {
   element.src = `assets/images/acts6_7/rock-${getRandomInt(1, 3)}.svg`;
   gsap.set(element, { rotation: getRandomInt(0, 360) });
 });
-gsap.to("#header", {
+// gsap.to(".header", {
+//   scrollTrigger: {
+//     scroller: ".drawer-content",
+//     trigger: ".header",
+//     end: "+=100px",
+//     pin: true,
+//   },
+// });
+ScrollTrigger.refresh(true);
+gsap.to(".scene-stoning", {
   scrollTrigger: {
     scroller: ".drawer-content",
-    trigger: "#header",
-    end: "+=100px",
+    trigger: ".scene-stoning",
+    // start: "+=-100px",
+    end: "+=150px",
     pin: true,
+    markers: true,
   },
 });
-gsap.to(".pinme", {
-  scrollTrigger: {
-    scroller: ".drawer-content",
-    trigger: ".pinme",
-    end: "+=900px",
-    pin: true,
-  },
-});
+
+// gsap.to(".scene-stoning", {
+//   scrollTrigger: {
+//     scroller: ".drawer-content",
+//     trigger: ".disciple-choosing",
+//     start: "bottom top",
+//     end: "+=150px",
+//     pin: true,
+//     markers: true,
+//   },
+// });
 
 let rockContacts = [];
 function animateRock(number, start, end) {
   rockContacts.push(end);
-  gsap.to(`#rock-${number}`, {
+  gsap.to(`.scene-stoning #rock-${number}`, {
     motionPath: `#rock-path-${number}`,
     scrollTrigger: {
       scroller: ".drawer-content",
-      trigger: "#rocks",
+      trigger: "#healthbar",
       start: `${start}px 0px`,
       scrub: true,
       end: `${end}px`,
@@ -68,20 +105,20 @@ rockContacts.sort((a, b) => {
   // sort numerically...
   return a - b;
 });
-gsap.to(".stephen-alive", {
+gsap.to(".scene-stoning .stephen-alive", {
   scrollTrigger: {
     scroller: ".drawer-content",
-    trigger: "#rocks",
+    trigger: "#healthbar",
     start: `${rockContacts[0]}px 0px`,
     end: `${rockContacts[rockContacts.length - 1]}px`,
     scrub: true,
   },
   opacity: 0,
 });
-gsap.from(".stephen-dead", {
+gsap.from(".scene-stoning .stephen-dead", {
   scrollTrigger: {
     scroller: ".drawer-content",
-    trigger: "#rocks",
+    trigger: "#healthbar",
     start: `${rockContacts[0]}px 0px`,
     end: `${rockContacts[rockContacts.length - 1]}px`,
     scrub: true,
@@ -91,14 +128,13 @@ gsap.from(".stephen-dead", {
 
 for (let i = 0; i < rockContacts.length; i++) {
   let contact = rockContacts[i];
-  gsap.to("#hbar", {
+  gsap.to(".scene-stoning #healthbar > progress", {
     scrollTrigger: {
       scroller: ".drawer-content",
-      trigger: "#rocks",
+      trigger: "#healthbar",
       start: `${contact - 10}px 0px`,
       end: `+=10px`,
       scrub: true,
-      // markers: true,
     },
     immediateRender: i == 0,
     value: 1 - (1 / rockContacts.length) * (i + 1),
