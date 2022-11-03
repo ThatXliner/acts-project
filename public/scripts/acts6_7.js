@@ -69,6 +69,43 @@ gsap.to(".disciple-choosing", {
   x: 500,
 });
 
+gsap.from(".stephen-seized", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".disciple-choosing",
+    start: "10px 0px",
+    scrub: true,
+    markers: true,
+  },
+  duration: 0.5,
+  opacity: 0,
+  x: -500,
+});
+gsap.to(".stephen-seized", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".stephen-seized",
+    start: "0px 0px",
+    scrub: true,
+    markers: true,
+  },
+  duration: 0.5,
+  opacity: 0,
+  x: 500,
+});
+gsap.from(".scene-stoning", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".stephen-seized",
+    start: "0px 0px",
+    scrub: true,
+    markers: true,
+  },
+  duration: 0.5,
+  opacity: 0,
+  x: 500,
+});
+
 // gsap.from(".stephen-seized", {
 //   scrollTrigger: {
 //     scroller: ".drawer-content",
