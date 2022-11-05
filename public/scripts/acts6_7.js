@@ -55,70 +55,74 @@ gsap.from(".header p", {
   x: -100,
   duration: 0.5,
 });
-
-gsap.to(".disciple-choosing", {
+gsap.to(disciplesContainer, {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: "main",
+    start: "0px 0px",
+    pin: true,
+    end: "+=1000",
+  },
+});
+// Fade away the other people
+disciplesContainer.querySelectorAll("div").forEach((e, i) => {
+  if (i == 0) {
+    e = e.querySelector("p");
+  }
+  gsap.to(e, {
+    scrollTrigger: {
+      scroller: ".drawer-content",
+      trigger: ".disciple-choosing",
+      start: `${-90 + 10 * (i + 1)}px 0px`,
+      end: "center-=20px top",
+      scrub: true,
+      markers: true,
+    },
+    immediateRender: false, // or else they'll "fade instantly"
+    opacity: 0,
+    y: 50 * (i + 1),
+  });
+});
+// Enlarge Stephen
+gsap.to(disciplesContainer.querySelector("div"), {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
-    start: "0px 0px",
     scrub: true,
-    markers: true,
+    start: "top top",
+    end: "center top",
+    ease: "linear",
   },
-  duration: 0.5,
-  opacity: 0,
-  x: 500,
+  duration: 1,
+  // or else he'll "glitch down" because at the start we were animating him
+  immediateRender: false,
+  scale: 3,
+  x: 50,
+  y: 50,
 });
-
-gsap.from(".stephen-seized", {
+// MARK: Text transition
+const texts = document.querySelector("#text").children;
+gsap.to(texts[0], {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
-    start: "10px 0px",
     scrub: true,
-    markers: true,
+    start: "top top",
+    end: "+=50%",
   },
-  duration: 0.5,
   opacity: 0,
-  x: -500,
+  y: -50,
 });
-gsap.to(".stephen-seized", {
+gsap.from(texts[1], {
   scrollTrigger: {
     scroller: ".drawer-content",
-    trigger: ".stephen-seized",
-    start: "0px 0px",
+    trigger: ".disciple-choosing",
     scrub: true,
-    markers: true,
+    start: "top+=20% top",
   },
-  duration: 0.5,
   opacity: 0,
-  x: 500,
+  y: 100,
 });
-gsap.from(".scene-stoning", {
-  scrollTrigger: {
-    scroller: ".drawer-content",
-    trigger: ".stephen-seized",
-    start: "0px 0px",
-    scrub: true,
-    markers: true,
-  },
-  duration: 0.5,
-  opacity: 0,
-  x: 500,
-});
-
-// gsap.from(".stephen-seized", {
-//   scrollTrigger: {
-//     scroller: ".drawer-content",
-//     trigger: ".disciple-choosing",
-//     start: "center 0px",
-//     scrub: true,
-//     markers: true,
-//   },
-//   duration: 1,
-//   opacity: 0,
-//   x: 10,
-// });
-// gsap.to()
 
 gsap.to(".scene-stoning", {
   scrollTrigger: {
