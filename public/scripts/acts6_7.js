@@ -88,7 +88,7 @@ gsap.from("#sanhedrin", {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
     scrub: true,
-    end: "+=210px",
+    end: "+=280px",
     pin: true,
   },
 });
@@ -98,16 +98,23 @@ transitionTimeline.to(".disciple-choosing", {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
     scrub: true,
-    markers: true,
-    start: 400,
+    start: 500,
+    end: "+=200px",
   },
   opacity: 0,
   x: -500,
 });
-// transitionTimeline.from(".scene-stoning", {
-//   opacity: 0,
-//   x: 500,
-// });
+transitionTimeline.from(".scene-stoning", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".scene-stoning",
+    scrub: true,
+    start: "-200px top",
+    end: "+=200px",
+  },
+  opacity: 0,
+  x: 500,
+});
 // MARK: Text transition
 const texts = document.querySelector("#text").children;
 gsap.to(texts[0], {
