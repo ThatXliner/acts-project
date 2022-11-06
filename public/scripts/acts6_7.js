@@ -34,7 +34,7 @@ gsap.to(".disciple-choosing", {
     trigger: ".disciple-choosing",
     start: 0,
     pin: true,
-    end: "+=190",
+    end: "+=200",
   },
 });
 // Fade away the other people
