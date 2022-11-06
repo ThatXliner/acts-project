@@ -17,36 +17,8 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-const disciplesContainer = document.querySelector(".disciples");
-let i = 1;
-for (let disciple of [
-  "Stephen",
-  "Philip",
-  "Prochorus",
-  "Nicanor",
-  "Timon",
-  "Parmenas",
-  "Nicolas",
-]) {
-  let div = document.createElement("div");
-  let image = document.createElement("img");
-  let text = document.createElement("p");
-  text.textContent = disciple;
-  image.src = `assets/images/acts6_7/${disciple.toLowerCase()}.svg`;
-  image.width = "100";
-  div.appendChild(text);
-  div.appendChild(image);
-  disciplesContainer.appendChild(div);
-  gsap.from(div, { y: 100, opacity: 0, delay: 0.1 * i });
-  i++;
-}
 
-document.querySelectorAll("#rocks > img").forEach((element) => {
-  element.src = `assets/images/acts6_7/rock-${getRandomInt(1, 3)}.svg`;
-  gsap.set(element, { rotation: getRandomInt(0, 360) });
-});
-ScrollTrigger.refresh(true); // since we dynamically updated content
-
+gsap.from(".disciples div", { y: 100, opacity: 0, stagger: 0.1 });
 gsap.from(".header h1", {
   x: 100,
   duration: 0.5,
@@ -55,17 +27,18 @@ gsap.from(".header p", {
   x: -100,
   duration: 0.5,
 });
-gsap.to(disciplesContainer, {
+const sceneTimeline = gsap.timeline();
+gsap.to(".disciple-choosing", {
   scrollTrigger: {
     scroller: ".drawer-content",
-    trigger: "main",
-    start: "0px 0px",
+    trigger: ".disciple-choosing",
+    start: 0,
     pin: true,
-    end: "+=1000",
+    end: "+=190",
   },
 });
 // Fade away the other people
-disciplesContainer.querySelectorAll("div").forEach((e, i) => {
+document.querySelectorAll(".disciples div").forEach((e, i) => {
   if (i == 0) {
     e = e.querySelector("p");
   }
@@ -73,10 +46,9 @@ disciplesContainer.querySelectorAll("div").forEach((e, i) => {
     scrollTrigger: {
       scroller: ".drawer-content",
       trigger: ".disciple-choosing",
-      start: `${-90 + 10 * (i + 1)}px 0px`,
-      end: "center-=20px top",
+      start: 10 * (i + 1),
+      end: 200,
       scrub: true,
-      markers: true,
     },
     immediateRender: false, // or else they'll "fade instantly"
     opacity: 0,
@@ -84,22 +56,58 @@ disciplesContainer.querySelectorAll("div").forEach((e, i) => {
   });
 });
 // Enlarge Stephen
-gsap.to(disciplesContainer.querySelector("div"), {
+gsap.to(".disciples div:first-child", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
     scrub: true,
-    start: "top top",
+    start: 40,
     end: "center top",
     ease: "linear",
   },
   duration: 1,
   // or else he'll "glitch down" because at the start we were animating him
   immediateRender: false,
-  scale: 3,
-  x: 50,
-  y: 50,
+  scale: 1.5,
+  x: "400%",
+  y: "270%",
 });
+gsap.from("#sanhedrin", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".disciple-choosing",
+    scrub: true,
+    start: 40,
+    end: "center top",
+  },
+  duration: 1,
+  opacity: 0,
+});
+gsap.from("#sanhedrin", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".disciple-choosing",
+    scrub: true,
+    end: "+=210px",
+    pin: true,
+  },
+});
+let transitionTimeline = gsap.timeline();
+transitionTimeline.to(".disciple-choosing", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".disciple-choosing",
+    scrub: true,
+    markers: true,
+    start: 400,
+  },
+  opacity: 0,
+  x: -500,
+});
+// transitionTimeline.from(".scene-stoning", {
+//   opacity: 0,
+//   x: 500,
+// });
 // MARK: Text transition
 const texts = document.querySelector("#text").children;
 gsap.to(texts[0], {
@@ -107,8 +115,8 @@ gsap.to(texts[0], {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
     scrub: true,
-    start: "top top",
-    end: "+=50%",
+    start: 0,
+    end: "+=25%",
   },
   opacity: 0,
   y: -50,
@@ -118,7 +126,8 @@ gsap.from(texts[1], {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
     scrub: true,
-    start: "top+=20% top",
+    start: 20,
+    end: "+=500px",
   },
   opacity: 0,
   y: 100,
@@ -130,10 +139,12 @@ gsap.to(".scene-stoning", {
     trigger: ".scene-stoning",
     end: "+=150px",
     pin: true,
-    markers: true,
   },
 });
-
+document.querySelectorAll("#rocks > img").forEach((element) => {
+  element.src = `assets/images/acts6_7/rock-${getRandomInt(1, 3)}.svg`;
+  gsap.set(element, { rotation: getRandomInt(0, 360) });
+});
 let rockContacts = [];
 function animateRock(number, start, end) {
   rockContacts.push(end);
