@@ -1,0 +1,60 @@
+/* Helpful for debugging SVG paths */
+path {
+  stroke-width: 2;
+  stroke: gray;
+}
+svg {
+  position: fixed;
+  display: none;
+}
+
+/* Since the health bar is implemented using progress
+ * these are some hacks to style it
+*/
+#healthbar > progress {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2rem;
+  border-radius: 20px;
+  border-width: 3px;
+  background-color: red;
+  border-color: gray;
+  width: 100%;
+}
+::-webkit-progress-value {
+  background-color: red;
+  border-radius: 20px;
+}
+::-webkit-progress-bar {
+  border-radius: 20px;
+}
+.disciple-choosing .disciples {
+  display: flex;
+  justify-content: space-evenly;
+}
+.disciple-choosing .disciples > div {
+  text-align: center;
+  margin-left: 1em;
+}
+
+/* Every thing related to the scene of stoning Stephen */
+.scene-stoning {
+  height: fit-content;
+}
+.stephen-alive {
+  position: absolute;
+  left: 200px;
+  top: 320px;
+  filter: drop-shadow(4px 4px 3px rgba(100, 100, 111, 0.7));
+}
+
+.stephen-dead {
+  position: absolute;
+  left: 10px;
+  top: 500px;
+  filter: drop-shadow(4px 4px 3px rgba(100, 100, 111, 0.7));
+}
+#rocks > img {
+  position: absolute;
+  filter: drop-shadow(4px 4px 3px rgba(100, 100, 111, 0.2));
+}
