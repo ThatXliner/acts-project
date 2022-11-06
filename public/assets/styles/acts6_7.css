@@ -1,4 +1,12 @@
-/* Since the health bar is implemented using <progress/>
+/* Used to be for debugging SVG paths,
+ * now it's part of the positioning... oops
+ */
+main svg {
+  position: fixed;
+  display: none;
+}
+
+/* Since the health bar is implemented using progress
  * these are some hacks to style it
 */
 #healthbar > progress {
