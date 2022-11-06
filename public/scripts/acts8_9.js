@@ -66,7 +66,6 @@ gsap.to(".paul", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".paul",
-    markers: "true",
     scrub: true,
     start: "100px 0",
   },
@@ -76,7 +75,6 @@ gsap.to(".paul", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".paul",
-    markers: "true",
     scrub: true,
     start: "100px 0",
   },
@@ -87,7 +85,7 @@ gsap.to(".words5", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".paul",
-    markers: "true",
+
     scrub: true,
     start: "100px 0",
   },
@@ -97,7 +95,7 @@ gsap.from(".jesus", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".paul",
-    markers: "true",
+
     scrub: true,
     start: "100px 0",
   },
@@ -109,7 +107,7 @@ if (window.$store.currentPage === 3) {
     scrollTrigger: {
       scroller: ".drawer-content",
       trigger: ".paul",
-      // markers: "true",
+
       scrub: true,
       start: "100px 0",
     },
@@ -120,7 +118,7 @@ if (window.$store.currentPage === 3) {
     scrollTrigger: {
       scroller: ".drawer-content",
       trigger: ".paul",
-      markers: "true",
+
       scrub: true,
       start: "800px 0",
       end: "1000px 0",
@@ -133,7 +131,7 @@ gsap.to(".jesus", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".paul",
-    // markers: "true",
+
     scrub: true,
     start: "400px 0",
     end: "800px 0",
@@ -146,7 +144,7 @@ gsap.from(".annanias", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".paul",
-    // markers: "true",
+
     scrub: true,
     start: "800px 0",
     end: "900px 0",
@@ -159,7 +157,7 @@ gsap.to(".words6", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".paul",
-    // markers: "true",
+
     scrub: true,
     start: "800px 0",
     end: "900px 0",
