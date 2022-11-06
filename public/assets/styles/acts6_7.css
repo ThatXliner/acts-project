@@ -1,14 +1,4 @@
-/* Helpful for debugging SVG paths */
-path {
-  stroke-width: 2;
-  stroke: gray;
-}
-svg {
-  position: fixed;
-  display: none;
-}
-
-/* Since the health bar is implemented using progress
+/* Since the health bar is implemented using <progress/>
  * these are some hacks to style it
 */
 #healthbar > progress {
