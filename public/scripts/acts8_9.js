@@ -102,31 +102,63 @@ gsap.from(".jesus", {
   y: -200,
   alpha: 0,
 });
-if (window.$store.currentPage === 3) {
-  gsap.to("#bg", {
+
+gsap
+  .timeline({
     scrollTrigger: {
       scroller: ".drawer-content",
       trigger: ".paul",
-
       scrub: true,
+      markers: true,
       start: "100px 0",
-    },
-    backgroundColor: "#000000",
-  });
-
-  gsap.from("#bg", {
-    scrollTrigger: {
-      scroller: ".drawer-content",
-      trigger: ".paul",
-
-      scrub: true,
-      start: "800px 0",
       end: "1000px 0",
     },
-    immediateRender: false,
+  })
+  .to("#bg", {
+    backgroundColor: "#000000",
+  })
+  .to("#bg", {
     backgroundColor: "#ffffff00",
   });
-}
+
+// gsap.from("#bg", {
+//   scrollTrigger: {
+//     scroller: ".drawer-content",
+//     trigger: ".paul",
+//     scrub: true,
+//     markers: true,
+//     start: "100px 0",
+//     end: "200px 0",
+//   },
+//   backgroundColor: "#ffffff00",
+// });
+
+// gsap.fromTo(
+//   "#bg",
+//   { backgroundColor: "#ffffff" },
+//   {
+//     scrollTrigger: {
+//       scroller: ".drawer-content",
+//       trigger: ".paul",
+//       scrub: true,
+//       markers: true,
+//       start: "300px 0",
+//       end: "400px 0",
+//     },
+//     backgroundColor: "#ffffff00",
+//   }
+// );
+
+// gasp.to("#bg", {
+//   scrollTrigger: {
+//     scroller: ".drawer-content",
+//     trigger: ".paul",
+//     markers: true,
+//     scrub: true,
+//     start: "800px 0",
+//   },
+//   backgroundColor: "#ffffff00",
+// });
 gsap.to(".jesus", {
   scrollTrigger: {
     scroller: ".drawer-content",

@@ -37,6 +37,10 @@
     color: white;
 }
 
+#bg {
+    background-color: #ffffff00;
+}
+
 .apostle {
     margin-right: 200px;
 }
