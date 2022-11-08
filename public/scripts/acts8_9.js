@@ -109,7 +109,6 @@ gsap
       scroller: ".drawer-content",
       trigger: ".paul",
       scrub: true,
-      markers: true,
       start: "100px 0",
       end: "1000px 0",
     },
@@ -120,45 +119,6 @@ gsap
   .to("#bg", {
     backgroundColor: "#ffffff00",
   });
-
-// gsap.from("#bg", {
-//   scrollTrigger: {
-//     scroller: ".drawer-content",
-//     trigger: ".paul",
-//     scrub: true,
-//     markers: true,
-//     start: "100px 0",
-//     end: "200px 0",
-//   },
-//   backgroundColor: "#ffffff00",
-// });
-
-// gsap.fromTo(
-//   "#bg",
-//   { backgroundColor: "#ffffff" },
-//   {
-//     scrollTrigger: {
-//       scroller: ".drawer-content",
-//       trigger: ".paul",
-//       scrub: true,
-//       markers: true,
-//       start: "300px 0",
-//       end: "400px 0",
-//     },
-//     backgroundColor: "#ffffff00",
-//   }
-// );
-
-// gasp.to("#bg", {
-//   scrollTrigger: {
-//     scroller: ".drawer-content",
-//     trigger: ".paul",
-//     markers: true,
-//     scrub: true,
-//     start: "800px 0",
-//   },
-//   backgroundColor: "#ffffff00",
-// });
 gsap.to(".jesus", {
   scrollTrigger: {
     scroller: ".drawer-content",
