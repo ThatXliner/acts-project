@@ -24,18 +24,6 @@ gsap.from("#chapter-logo", {
   ease: "out",
 });
 
-/*const wall = gsap.from(".wall", {
-  scrollTrigger: {
-    scroller: ".drawer-content",
-    trigger: ".wall",
-  },
-  alpha: 0,
-  x: -600,
-  duration: 4,
-  ease: "out",
-});
-*/
-
 gsap.to(".disciples", {
   scrollTrigger: {
     scroller: ".drawer-content",
