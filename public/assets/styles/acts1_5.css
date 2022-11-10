@@ -80,7 +80,7 @@ body {
   background-size: 100%;
   margin-left: 25%;
   margin-right: 75%;
-  margin-top: -50%;
+  margin-top: -60%;
 }
 
 .holy-spirit {
@@ -94,7 +94,7 @@ body {
 .matthias {
   margin-left: 2%;
   margin-right: 98%;
-  margin-top: 70%;
+  margin-top: 50%;
   width: 300px;
   height: auto;
 }
@@ -102,7 +102,7 @@ body {
 .paul {
   margin-left: 70%;
   margin-right: 30%;
-  margin-top: 100%;
+  margin-top: 70%;
   width: 300px;
   height: auto;
 }
@@ -127,7 +127,7 @@ body {
 .priest {
   margin-left: 60%;
   margin-right: 40%;
-  margin-top: -30%;
+  margin-top: -10%;
   margin-bottom: 10%;
   width: 350px;
   height: auto;
@@ -165,7 +165,7 @@ body {
   width: 700px;
   margin-left: 20%;
   margin-right: 80%;
-  margin-top: 265%;
+  margin-top: 235%;
 }
 
 .standup {
@@ -194,7 +194,7 @@ body {
 .annaniasdead {
   margin-left: 33%;
   margin-right: 67%;
-  margin-top: 100%;
+  margin-top: 65%;
   width: 300px;
   height: auto;
 }
@@ -234,12 +234,8 @@ body {
 .annaniaslie {
   margin-right: 75%;
   margin-left: 25%;
-  margin-top: -40%;
+  margin-top: -50%;
   width: 600px;
   height: auto;
   opacity: 0%;
-}
-
-.t {
-  margin-top: 150%;
 }
