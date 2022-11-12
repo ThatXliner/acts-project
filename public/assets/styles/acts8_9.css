@@ -38,6 +38,7 @@
 }
 
 #bg {
+    pointer-events: none;
     background-color: #ffffff00;
 }
 
