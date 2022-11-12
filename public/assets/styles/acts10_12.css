@@ -31,6 +31,18 @@
   width: 25%;
   right: 5%;
 }
+.words6 {
+  position: absolute;
+  top: 1600px;
+  width: 25%;
+  right: 5%;
+}
+.words7 {
+  position: absolute;
+  top: 2000px;
+  width: 25%;
+  right: 5%;
+}
 
 .spacing {
     position: absolute;
