@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "command",
+            "name": "Start Vite Server",
+            "program": "bun",
+            "args": ["run", "dev"]
+        }
+    ]
+}
