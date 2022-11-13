@@ -46,8 +46,24 @@
     width: 25%;
     right: 5%;
 }
+.words8 {
+    position: absolute;
+    top: 2700px;
+    width: 25%;
+    right: 5%;
+}
 
 .spacing {
     position: absolute;
     height: 1000%;
+}
+
+.title2 {
+    position: absolute;
+    top: 2500px;
+}
+
+#scene2 {
+    position: absolute;
+    top: 2600px;
 }

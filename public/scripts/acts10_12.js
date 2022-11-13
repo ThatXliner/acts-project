@@ -4,8 +4,19 @@ gsap.to("#scene1", {
     trigger: "#scene1",
     pin: "#scene1",
     start: "-50px 0",
-    end: "2000px start",
+    end: "1800px start",
     pinSpacing: "false"
+  }
+});
+
+gsap.to("#scene2", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: "#scene2",
+    pin: "#scene2",
+    start: "000px 0",
+    end: "100px start",
+    markers: "true"
   }
 });
 gsap.from(".person1", {
@@ -13,7 +24,6 @@ gsap.from(".person1", {
     scroller: ".drawer-content",
     trigger: ".person1",
     scrub: true,
-    markers: true,
     start: "1200px 0",
     end: "1400px 0"
   },
@@ -25,7 +35,6 @@ gsap.from(".dove", {
     scroller: ".drawer-content",
     trigger: ".dove",
     scrub: true,
-    markers: true,
     start: "1600px 0",
     end: "1700px 0"
   },
@@ -37,7 +46,6 @@ gsap.to(".peter", {
     scroller: ".drawer-content",
     trigger: "peter",
     scrub: true,
-    markers: { startColor: "green", endColor: "red", fontSize: "12px" },
     start: "400px 0px",
     end: "1000px 0px"
   },
@@ -49,7 +57,6 @@ gsap.from(".sheet", {
     scroller: ".drawer-content",
     trigger: "peter",
     scrub: true,
-    markers: { startColor: "green", endColor: "red", fontSize: "12px" },
     start: "400px 0px",
     end: "1000px 0px"
   },
@@ -62,7 +69,6 @@ gsap.to(".sheet", {
     scroller: ".drawer-content",
     trigger: "peter",
     scrub: true,
-    markers: { startColor: "green", endColor: "red", fontSize: "12px" },
     start: "1200px 0px",
     end: "2000px 0px"
   },
