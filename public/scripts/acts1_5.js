@@ -1,5 +1,3 @@
-gsap.registerPlugin(ScrollTrigger);
-
 gsap.from("#acts1-logo", {
   scrollTrigger: {
     scroller: ".drawer-content",
@@ -40,7 +38,6 @@ gsap.to(".disciples", {
     scroller: ".drawer-content",
     trigger: ".disciples",
     scrub: true,
-    markers: true,
     pin: true,
     start: "30% 75%",
   },
@@ -55,7 +52,6 @@ gsap.to(".angel1", {
     scroller: ".drawer-content",
     trigger: ".angel1",
     scrub: 1,
-    markers: true,
     pin: true,
     start: "5% 15%",
   },
@@ -70,7 +66,6 @@ gsap.to(".angel2", {
     scroller: ".drawer-content",
     trigger: ".angel2",
     scrub: 1,
-    markers: true,
     pin: true,
     start: "5% 15%",
   },
