@@ -1,47 +1,50 @@
 .words1 {
-  position: absolute;
-  top: 500px;
-  width: 25%;
-  right: 5%;
+    position: absolute;
+    top: 500px;
+    width: 25%;
+    right: 5%;
 }
+
 .words2 {
-  position: absolute;
-  top: 700px;
-  width: 25%;
-  right: 5%;
+    position: absolute;
+    top: 700px;
+    width: 25%;
+    right: 5%;
 }
 
 .words3 {
-  position: absolute;
-  top: 900px;
-  width: 25%;
-  right: 5%;
+    position: absolute;
+    top: 900px;
+    width: 25%;
+    right: 5%;
 }
 
 .words4 {
-  position: absolute;
-  top: 1100px;
-  width: 25%;
-  right: 5%;
+    position: absolute;
+    top: 1100px;
+    width: 25%;
+    right: 5%;
 }
 
 .words5 {
-  position: absolute;
-  top: 1300px;
-  width: 25%;
-  right: 5%;
+    position: absolute;
+    top: 1300px;
+    width: 25%;
+    right: 5%;
 }
+
 .words6 {
-  position: absolute;
-  top: 1600px;
-  width: 25%;
-  right: 5%;
+    position: absolute;
+    top: 1600px;
+    width: 25%;
+    right: 5%;
 }
+
 .words7 {
-  position: absolute;
-  top: 2000px;
-  width: 25%;
-  right: 5%;
+    position: absolute;
+    top: 2000px;
+    width: 25%;
+    right: 5%;
 }
 
 .spacing {
