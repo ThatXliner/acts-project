@@ -1,4 +1,6 @@
 // gsap.to("main > div", { x: 250 });
+const BOAT = document.querySelector("#boat");
+gsap.set(BOAT, { x: 1000, y: 240 });
 const chapter = document.querySelector("#chapter");
 chapter.textContent = "13";
 let adventureTimeline = gsap.timeline({
@@ -17,3 +19,4 @@ let adventureTimeline = gsap.timeline({
     },
   },
 });
+adventureTimeline.addLabel("13");
