@@ -51,6 +51,7 @@ export function switchPage(sID) {
       // Safer than eval; also faster.
       Function(data)();
     });
+  window.scroll(0, 0);
 }
 
 export function parseSID(sID) {
