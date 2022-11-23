@@ -1,3 +1,31 @@
+// quiz component [BETA]
+var rad = document.quiz.quizOptions;
+var prev = null;
+let currentOption = null;
+for (var i = 0; i < rad.length; i++) {
+  rad[i].addEventListener("change", function () {
+    prev
+      ? () => {
+          currentOption = prev.value;
+          modifyQuiz();
+        }
+      : null;
+    if (this !== prev) {
+      prev = this;
+    }
+    currentOption = this.value;
+    modifyQuiz();
+  });
+}
+let quizOutput = document.getElementById("quizOutput");
+let modifyQuiz = () => {
+  if (currentOption === "option1") {
+    quizOutput.innerHTML = "you are correct";
+  } else {
+    quizOutput.innerHTML = "you are wrong";
+  }
+};
+
 gsap.from("#titles", {
   scrollTrigger: {
     scroller: ".drawer-content",
