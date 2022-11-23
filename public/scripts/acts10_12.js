@@ -14,8 +14,8 @@ gsap.to("#scene2", {
     scroller: ".drawer-content",
     trigger: "#scene2",
     pin: "#scene2",
-    start: "000px 0",
-    end: "100px start",
+    start: "0px 0",
+    end: "3500px start",
     markers: "true"
   }
 });
@@ -76,4 +76,44 @@ gsap.to(".sheet", {
   ease: "out",
   opacity: 0,
   y: -500
+});
+
+gsap.from(".jailcell", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".jailcell",
+    scrub: true,
+    start: "0px 0px",
+    end: "1800px; 0px"
+  },
+  ease: "out",
+  opacity: 0,
+  y: -500
+});
+gsap.from(".angel", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".angel",
+    scrub: true,
+    start: "0px 0px",
+    end: "1800px; 0px"
+  },
+  ease: "out",
+  opacity: 0,
+  height: 0,
+  x: 500
+});
+
+gsap.to(".jailcell", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".jailcell",
+    scrub: true,
+    start: "2000px 0px",
+    end: "3800px; 0px"
+  },
+  immediateRender: false,
+  ease: "out",
+  opacity: 0,
+  height: 1000
 });
