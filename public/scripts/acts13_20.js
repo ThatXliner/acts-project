@@ -5,7 +5,7 @@ const nextButton = document.querySelector("#next-btn");
 chapter.textContent = "13";
 const chapterContent = document.querySelector("#chapter-content");
 gsap.set(BOAT, { x: "1210%", y: "400%" }); // Seleucia/Antioch
-const INITIAL_TEXT = "Scroll to view the journey";
+const INITIAL_TEXT = "Scroll or click on the buttons to view the journey";
 chapterContent.innerHTML = INITIAL_TEXT;
 const END = "+=10000px";
 
@@ -86,11 +86,11 @@ function check() {
 check();
 prevButton.addEventListener("click", function (e) {
   cur--;
-  boatTimeline.seek(labels[cur]);
+  boatTimeline.tweenTo(labels[cur]);
   check();
 });
 nextButton.addEventListener("click", function (e) {
   cur++;
-  boatTimeline.seek(labels[cur]);
+  boatTimeline.tweenTo(labels[cur]);
   check();
 });
