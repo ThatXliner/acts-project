@@ -2,7 +2,7 @@
 const BOAT = document.querySelector("#boat");
 const chapter = document.querySelector("#chapter");
 chapter.textContent = "13";
-gsap.set(BOAT, { x: 1170, y: 280 });
+gsap.set(BOAT, { x: "1170%", y: "350%" });
 gsap.to(".background", {
   scrollTrigger: {
     scroller: ".drawer-content",
