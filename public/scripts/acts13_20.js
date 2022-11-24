@@ -1,5 +1,7 @@
 const BOAT = document.querySelector("#boat");
 const chapter = document.querySelector("#chapter");
+const prevButton = document.querySelector("#prev-btn");
+const nextButton = document.querySelector("#next-btn");
 chapter.textContent = "13";
 const chapterContent = document.querySelector("#chapter-content");
 gsap.set(BOAT, { x: "1210%", y: "400%" }); // Seleucia/Antioch
@@ -19,18 +21,19 @@ gsap.to(".background", {
   },
 });
 let places = [];
-function addPlace(label, x, y, text) {
-  places.push([label, x, y, text]);
+function addPlace(label, x, y, text, acts = null) {
+  places.push([label, x, y, text, acts]);
 }
 addPlace(
-  "Cyprus (Acts 13:4)",
+  "Cyprus",
   "1100%",
   "500%",
   `Paul traveled from Antioch to Cyprus. There they met Bar-Jesus, a sourcerer
 and false prophet. Bar-Jesus, <i>also called Elymas</i>, was cursed by Saul,
-<i class="underline font-bold">also called Paul</i>.`
+<i class="underline font-bold">also called Paul</i>.`,
+  "13:4"
 );
-addPlace("Pamphylia (Acts 13:13)", "950%", "340%", `test`);
+addPlace("Pamphylia", "950%", "340%", `test`, "13:13");
 let boatTimeline = gsap.timeline({
   scrollTrigger: {
     scroller: ".drawer-content",
@@ -47,13 +50,47 @@ let boatTimeline = gsap.timeline({
     },
   },
 });
+let labels = [];
 for (let place of places) {
   boatTimeline.addLabel(place[0]);
+  labels.push(place[0]);
   boatTimeline.to(BOAT, { x: place[1], y: place[2] }, place[0]);
   boatTimeline.to(
     chapterContent,
     { text: { value: place[3], type: "diff" } },
     place[0]
   );
+  if (place[4] !== null) {
+    boatTimeline.to(
+      chapter,
+      { text: { value: place[4], type: "diff" } },
+      place[0]
+    );
+  }
 }
 boatTimeline.addLabel("end");
+labels.push("end");
+let cur = 0;
+function check() {
+  if (cur == 0) {
+    prevButton.classList.add("btn-disabled");
+    nextButton.classList.remove("btn-disabled");
+  } else if (cur == labels.length - 1) {
+    prevButton.classList.remove("btn-disabled");
+    nextButton.classList.add("btn-disabled");
+  } else {
+    prevButton.classList.remove("btn-disabled");
+    extButton.classList.remove("btn-disabled");
+  }
+}
+check();
+prevButton.addEventListener("click", function (e) {
+  cur--;
+  boatTimeline.seek(labels[cur]);
+  check();
+});
+nextButton.addEventListener("click", function (e) {
+  cur++;
+  boatTimeline.seek(labels[cur]);
+  check();
+});
