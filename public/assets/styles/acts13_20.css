@@ -4,3 +4,9 @@ main .background {
 #boat {
   opacity: 90%;
 }
+main .my-show {
+  opacity: 100;
+}
+main .my-hidden {
+  opacity: 100;
+}
