@@ -49,8 +49,8 @@ let boatTimeline = gsap.timeline({
 });
 for (let place of places) {
   boatTimeline.addLabel(place[0]);
-  label.to(BOAT, { x: place[1], y: place[2] }, place[0]);
-  label.to(
+  boatTimeline.to(BOAT, { x: place[1], y: place[2] }, place[0]);
+  boatTimeline.to(
     chapterContent,
     { text: { value: place[3], type: "diff" } },
     place[0]
