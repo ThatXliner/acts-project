@@ -1,3 +1,6 @@
 main .background {
-  width: 85vw;
+  width: 100%;
+}
+#boat {
+  opacity: 90%;
 }
