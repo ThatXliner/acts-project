@@ -1,25 +1,3 @@
-const BOAT = document.querySelector("#boat");
-const chapter = document.querySelector("#chapter");
-const prevButton = document.querySelector("#prev-btn");
-const nextButton = document.querySelector("#next-btn");
-chapter.textContent = "13";
-const chapterContent = document.querySelector("#chapter-content");
-gsap.set(BOAT, { x: "1210%", y: "400%" }); // Seleucia/Antioch
-const INITIAL_TEXT = "Scroll or click on the buttons to view the journey";
-chapterContent.innerHTML = INITIAL_TEXT;
-const END = "+=10000px";
-
-gsap.to(".background", {
-  scrollTrigger: {
-    scroller: ".drawer-content",
-    trigger: "main",
-    pin: true,
-    start: "top top",
-    end: END,
-    markers: true,
-    scrub: true,
-  },
-});
 let places = [];
 function addPlace(label, x, y, text, acts = null) {
   places.push([label, x, y, text, acts]);
@@ -33,24 +11,31 @@ and false prophet. Bar-Jesus, <i>also called Elymas</i>, was cursed by Saul,
 <i class="underline font-bold">also called Paul</i>.`,
   "13:4"
 );
-addPlace("Pamphylia", "950%", "340%", `test`, "13:13");
-let boatTimeline = gsap.timeline({
-  scrollTrigger: {
-    scroller: ".drawer-content",
-    trigger: ".background",
-    start: `0px 0px`,
-    scrub: true,
-    end: `+=${places.length * 100}px`,
-    markers: true,
-    snap: {
-      snapTo: "labels",
-      duration: { min: 0, max: 1 },
-      delay: 0.2,
-      ease: "power1.inOut",
-    },
-  },
-});
+addPlace(
+  "Pamphylia",
+  "950%",
+  "340%",
+  `Paul and his companions then sailed to Perga in Pamphylia`,
+  "13:13"
+);
+addPlace(
+  "Antioch in Pisidia",
+  "1000%",
+  "310%",
+  `Then they went to Antioch in Pisidia. For some reason, John left them to return to Jerusalem. In Pisidia, Paul preached about how God had led Israel throughout these generations and then the gospel`,
+  "13:14-49"
+);
+
+let boatTimeline = gsap.timeline();
 let labels = [];
+
+const BOAT = document.querySelector("#boat");
+gsap.set(BOAT, { x: "1210%", y: "400%" }); // Seleucia/Antioch
+const chapter = document.querySelector("#chapter");
+chapter.textContent = "13";
+const chapterContent = document.querySelector("#chapter-content");
+chapterContent.innerHTML = "Click on the buttons to navigate the journey";
+
 for (let place of places) {
   boatTimeline.addLabel(place[0]);
   labels.push(place[0]);
@@ -70,7 +55,13 @@ for (let place of places) {
 }
 boatTimeline.addLabel("end");
 labels.push("end");
+// prevent auto play
+boatTimeline.pause();
+boatTimeline.seek(0);
+// make navigation buttons work
 let cur = 0;
+const prevButton = document.querySelector("#prev-btn");
+const nextButton = document.querySelector("#next-btn");
 function check() {
   if (cur == 0) {
     prevButton.classList.add("btn-disabled");
@@ -80,7 +71,7 @@ function check() {
     nextButton.classList.add("btn-disabled");
   } else {
     prevButton.classList.remove("btn-disabled");
-    extButton.classList.remove("btn-disabled");
+    nextButton.classList.remove("btn-disabled");
   }
 }
 check();
