@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger, MotionPathPlugin, TextPlugin);
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin, TextPlugin, RoughEase);
 import { parseSID, switchPage } from "./acts-api.js";
 // set up side bar
 document.getElementById("sidebarUl").innerHTML = $store.pages
