@@ -161,7 +161,7 @@ addPlace(
     ["1050%", "300%"],
     ["980%", "280%"],
   ],
-  `The actual verse says it better: "After spending some time in Antioch, Paul set out from there and traveled from place to place throughout the region of Galatia and Phrygia, strengthening the disciples.`,
+  `The actual verse says it better: "After spending some time in Antioch, Paul set out from there and traveled from place to place throughout the region of Galatia and Phrygia, strengthening the disciples. This is the start of Paul's third and final journey.`,
   "18:23"
 );
 addPlace(
