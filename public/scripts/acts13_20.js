@@ -1,5 +1,6 @@
 const BOAT = document.querySelector("#boat");
-gsap.set(BOAT, { x: "1210%", y: "400%" }); // Seleucia/Antioch
+const ANTIOCH = ["1210%", "400%"];
+gsap.set(BOAT, { x: ANTIOCH[0], y: ANTIOCH[1] }); // Seleucia/Antioch
 const chapter = document.querySelector("#chapter");
 chapter.textContent = "13";
 const chapterContent = document.querySelector("#chapter-content");
@@ -124,6 +125,57 @@ addPlace(
   `Prompted by the Holy Spirit, they went to Macedonia: they went to the cities of Samothrace, Neopolis, and Philippi.`,
   "16:9-12"
 );
+addPlace(
+  "After slave",
+  [
+    ["610%", "100%"],
+    ["600%", "110%"],
+    ["560%", "110%"],
+  ],
+  `After an incident back in Philippi, Paul and his companions (Silas and Timothy) went to Amphipolis, Apollonia, and then Thessalonica. There they proclaimed Jesus. Some of them were persuaded, others were jealous and had tried to get people against them just like in Iconium.`,
+  "17:1-5"
+);
+addPlace(
+  "Berea",
+  [["540%", "120%"]],
+  `In the night, Paul and his friends went on to other cities. They went to Berea. "...the Berean Jews were of more noble character than those in Thessalonica, for they received the message with great eagerness and examined the Scriptures every day to see if what Paul said was true."`,
+  "17:10-12"
+);
+addPlace(
+  "Athens",
+  [["600%", "290%"]],
+  `Alas, they were on the run since the Jews in Thessalonica heard about Paul preaching in Berea. So Paul went to Athens. Silas and Timothy stayed at Berea for a bit. They were told to join Paul as soon as possible.`,
+  "17:10-12"
+);
+addPlace(
+  "Syria",
+  [["770%", "290%"], ["1200%", "700%"], ANTIOCH],
+  `Paul left Silas and Timothy to go to Syria. He was accompanied by Priscilla and Aquila. They went to Ephesus, Caesarea, Jerusalem, and then finally Antioch, where he started the second journey.`,
+  "18:1-11"
+);
+addPlace(
+  "Strength",
+  [
+    ["1130%", "340%"],
+    ["1040%", "320%"],
+    ["1050%", "300%"],
+    ["980%", "280%"],
+  ],
+  `The actual verse says it better: "After spending some time in Antioch, Paul set out from there and traveled from place to place throughout the region of Galatia and Phrygia, strengthening the disciples.`,
+  "18:23"
+);
+addPlace(
+  "Ephv2",
+  [["770%", "290%"]],
+  `Paul went to Ephesus to talk about baptism.`,
+  "19:1"
+);
+// addPlace(
+//   "Jeru-Mace-Achaia",
+//   [["770%", "290%"]],
+//   `Paul went to Ephesus to talk about baptism.`,
+//   "19:1"
+// );
 
 let boatTimeline = gsap.timeline();
 let labels = [];
@@ -145,7 +197,11 @@ for (let place of places) {
     //     [boatTimeline, label]
     //   );
     for (let coord of coords) {
-      innerAniTimeline.to(BOAT, { x: coord[0], y: coord[1] });
+      innerAniTimeline.to(BOAT, {
+        x: coord[0],
+        y: coord[1],
+        duration: coords.length <= 3 ? 1 : 0.42,
+      });
     }
     //   innerAniTimeline.to(REPLAY_BUTTON, { opacity: 100 });
     boatTimeline.add(innerAniTimeline, label);
@@ -153,11 +209,7 @@ for (let place of places) {
     boatTimeline.add(coords, label);
   }
 
-  boatTimeline.to(
-    chapterContent,
-    { text: { value: place[2], type: "diff" } },
-    label
-  );
+  boatTimeline.to(chapterContent, { text: { value: place[2] } }, label);
   if (place[4] !== null) {
     boatTimeline.to(
       chapter,
@@ -168,12 +220,12 @@ for (let place of places) {
 }
 boatTimeline.addLabel("end");
 labels.push("end");
-let cur = 0;
-// let cur = labels.length - 2;
-// boatTimeline.play(labels[cur]);
+// let cur = 0;
+let cur = labels.length - 2;
+boatTimeline.play(labels[cur]);
 // prevent auto play
-boatTimeline.pause();
-boatTimeline.seek(0);
+// boatTimeline.pause();
+// boatTimeline.seek(0);
 // make navigation buttons work
 const prevButton = document.querySelector("#prev-btn");
 const nextButton = document.querySelector("#next-btn");
