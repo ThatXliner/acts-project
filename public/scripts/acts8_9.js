@@ -20,9 +20,9 @@ for (var i = 0; i < rad.length; i++) {
 let quizOutput = document.getElementById("quizOutput");
 let modifyQuiz = () => {
   if (currentOption === "option1") {
-    quizOutput.innerHTML = "you are correct";
+    quizOutput.innerHTML = "✓ You are correct! Good job!";
   } else {
-    quizOutput.innerHTML = "you are wrong";
+    quizOutput.innerHTML = "✗ Incorrect. Read the page again to find the answer.";
   }
 };
 

@@ -90,10 +90,10 @@
   position: absolute;
   width: 80%;
   left: 100px;
-  top: 270%;
+  top: 260%;
   color: black;
   background-color: #eee;
-  height: 400px;
+  height: 550px;
   border-radius: 20px;
 }
 
@@ -112,26 +112,50 @@
 }
 
 .radio-toolbar label {
-  display: inline-block;
+  display: flex;
   background-color: #ddd;
   padding: 10px 20px;
   font-family: sans-serif, Arial;
   font-size: 16px;
-  border: 2px solid #444;
   border-radius: 4px;
   border-radius: 10px;
   transition: 0.25s;
+  margin: 10px;
+}
+
+.quizAnswer {
+  padding-left: 10px;
+  font-size: 30px;
+}
+
+.optionLetter {
+  background-color: white;
+  border: 5px solid #ddd;
+  border-radius: 100px;
+  width: 3vw;
+  height: 3vw;
+  text-align: center;
+  line-height: 2.5vw;
+  font-weight: bold;
 }
 
 .radio-toolbar label:hover {
-  background-color: #dfd;
-}
-
-.radio-toolbar input[type="radio"]:focus + label {
-  border: 2px dashed #444;
+  background-color: rgb(187, 187, 187);
 }
 
 .radio-toolbar input[type="radio"]:checked + label {
-  background-color: rgb(151, 151, 151);
-  border-color: rgb(50, 50, 50);
+  border: 5px solid rgb(151, 151, 151);
+}
+
+.A {
+  border-color: lightcoral;
+}
+.B {
+  border-color: lightsalmon;
+}
+.C {
+  border-color: lightgreen;
+}
+.D {
+  border-color: lightblue;
 }
