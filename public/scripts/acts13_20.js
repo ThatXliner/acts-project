@@ -167,9 +167,47 @@ addPlace(
 addPlace(
   "Ephv2",
   [["770%", "290%"]],
-  `Paul went to Ephesus to talk about baptism.`,
-  "19:1"
+  `Paul went to Ephesus to talk about baptism. He preached there for 2 years`,
+  "19:1-10"
 );
+addPlace(
+  "3mace",
+  [
+    ["620%", "100%"],
+    ["600%", "290%"],
+  ],
+  `After that, he traveled through Macedonia, arriving at Greece. He stayed there for 3 months.`,
+  "20:1-2"
+);
+addPlace(
+  "Se trip - mace",
+  [["620%", "100%"]],
+  `After those 3 months, Paul decided to to go back to Syria. That plan was scraped when he heard of a plot to kill him. So "he decided to go back through Macedonia."`,
+  "20:3"
+);
+addPlace(
+  "Se trip - Troas",
+  [["750%", "170%"]],
+  `Sopater son of Pyrrhus from Berea, Aristarchus and Secundus from Thessalonica, Gaius from Derbe, Timothy and Tychicus and Trophimus from the province of Asia were waiting for Paul in Troas. Paul joined them after 5 days. They stayed at Troas for 7 days.`,
+  "20:4-6"
+);
+addPlace(
+  "Mitylene",
+  [["740%", "220%"]],
+  `Paul's companions met Paul at Assos, since Paul went there on foot. They the went to Mitylene`,
+  "20:13-14"
+);
+addPlace(
+  "Mitylene",
+  [
+    ["740%", "240%"],
+    ["760%", "320%"],
+    ["780%", "320%"],
+  ],
+  `They went to Chios, Samos, and Miletus. Paul was in a hurry to reach Jerusalem.`,
+  "20:15-16"
+);
+// jeru stuff
 // addPlace(
 //   "Jeru-Mace-Achaia",
 //   [["770%", "290%"]],
