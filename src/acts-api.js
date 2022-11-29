@@ -50,6 +50,40 @@ export function switchPage(sID) {
     .then((data) => {
       // Safer than eval; also faster.
       Function(data)();
+      try {
+        // Init quiz after loading
+        var rad = document.quiz.quizOptions;
+        var prev = null;
+        let currentOption = null;
+        for (var i = 0; i < rad.length; i++) {
+          rad[i].addEventListener("change", function () {
+            prev
+              ? () => {
+                  currentOption = prev.value;
+                  modifyQuiz();
+                }
+              : null;
+            if (this !== prev) {
+              prev = this;
+            }
+            currentOption = this.value;
+            modifyQuiz();
+          });
+        }
+        let quizOutput = document.getElementById("quizOutput");
+        let modifyQuiz = () => {
+          if (
+            currentOption ===
+            "option" +
+              +document.getElementsByName("correct")[0].getAttribute("content")
+          ) {
+            quizOutput.innerHTML = "✓ You are correct! Good job!";
+          } else {
+            quizOutput.innerHTML =
+              "✗ Incorrect. Read the page again to find the answer.";
+          }
+        };
+      } catch (error) {}
     });
   window.scroll(0, 0);
 }
