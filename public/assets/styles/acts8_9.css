@@ -1,90 +1,89 @@
 /* Words that scroll w/o pin on the right */
 .words1 {
-    position: absolute;
-    top: 70%;
-    width: 25%;
-    right: 5%;
+  position: absolute;
+  top: 70%;
+  width: 25%;
+  right: 5%;
 }
 .words2 {
-    position: absolute;
-    top: 100%;
-    width: 25%;
-    right: 5%;
+  position: absolute;
+  top: 100%;
+  width: 25%;
+  right: 5%;
 }
 .words3 {
-    position: absolute;
-    top: 120%;
-    width: 25%;
-    right: 5%;
+  position: absolute;
+  top: 120%;
+  width: 25%;
+  right: 5%;
 }
 .words4 {
-    position: absolute;
-    top: 180%;
-    width: 25%;
-    right: 5%;
+  position: absolute;
+  top: 180%;
+  width: 25%;
+  right: 5%;
 }
 .words5 {
-    position: absolute;
-    top: 200%;
-    width: 25%;
-    right: 5%;
+  position: absolute;
+  top: 200%;
+  width: 25%;
+  right: 5%;
 }
 .words6 {
-    position: absolute;
-    top: 240%;
-    width: 25%;
-    right: 5%;
-    color: white;
+  position: absolute;
+  top: 240%;
+  width: 25%;
+  right: 5%;
+  color: white;
 }
 
 #bg {
-    pointer-events: none;
-    background-color: #ffffff00;
+  pointer-events: none;
+  background-color: #ffffff00;
 }
 
 .apostle {
-    margin-right: 200px;
+  margin-right: 200px;
 }
 
 .dove {
-    position: absolute;
-    left: 45%;
-    top: 20%;
+  position: absolute;
+  left: 45%;
+  top: 20%;
 }
 
 .simon {
-    position: absolute;
-    bottom: -15%;
-    left: 26%;   
+  position: absolute;
+  bottom: -15%;
+  left: 26%;
 }
 
 .title2 {
-    position: absolute;
-    top: 140%;
+  position: absolute;
+  top: 140%;
 }
 
 #scene2 {
-    position: absolute;
-    top: 140%;
+  position: absolute;
+  top: 140%;
 }
 
 .jesus {
-    position: absolute;
-    top: 0;
+  position: absolute;
+  top: 0;
 }
 
 .spacing {
-    position: absolute;
-    height: 215%;
+  position: absolute;
+  height: 215%;
 }
 
 .annanias {
-    position: absolute;
-    top: 10%;
+  position: absolute;
+  top: 10%;
 }
 .words7 {
-    position: absolute;
-    top: 265%;
-    color: black;
+  position: absolute;
+  top: 265%;
+  color: black;
 }
-
