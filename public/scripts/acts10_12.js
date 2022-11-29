@@ -16,7 +16,6 @@ gsap.to("#scene2", {
     pin: "#scene2",
     start: "0px 0",
     end: "3500px start",
-    markers: "true",
   },
 });
 gsap.from(".person1", {
@@ -257,7 +256,6 @@ gsap.from(".words7", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".words7",
-    markers: true,
     scrub: true,
     start: "-500% 0",
     end: "-430% start",
@@ -268,7 +266,6 @@ gsap.to(".words7", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".words7",
-    markers: true,
     scrub: true,
     start: "0 0",
     end: "20% start",
