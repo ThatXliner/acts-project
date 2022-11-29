@@ -1,0 +1,100 @@
+.words1 {
+  position: absolute;
+  top: 500px;
+  width: 25%;
+  right: 5%;
+}
+
+.words2 {
+  position: absolute;
+  top: 700px;
+  width: 25%;
+  right: 5%;
+}
+
+.words3 {
+  position: absolute;
+  top: 900px;
+  width: 25%;
+  right: 5%;
+}
+
+.words4 {
+  position: absolute;
+  top: 1100px;
+  width: 25%;
+  right: 5%;
+}
+
+.words5 {
+  position: absolute;
+  top: 1300px;
+  width: 25%;
+  right: 5%;
+}
+
+.words6 {
+  position: absolute;
+  top: 1600px;
+  width: 25%;
+  right: 5%;
+}
+
+.words7 {
+  position: absolute;
+  top: 2000px;
+  width: 25%;
+  right: 5%;
+}
+.words8 {
+  position: absolute;
+  top: 3500px;
+  width: 25%;
+  right: 5%;
+}
+.words9 {
+  position: absolute;
+  top: 4000px;
+  width: 25%;
+  right: 5%;
+}
+.words10 {
+  position: absolute;
+  top: 5500px;
+  width: 25%;
+  right: 5%;
+}
+
+.spacing {
+  position: absolute;
+  height: 1000%;
+}
+
+.title2 {
+  position: absolute;
+  top: 2500px;
+}
+
+#scene2 {
+  position: absolute;
+  top: 2600px;
+  padding-top: 600px;
+}
+
+.jailcell {
+  position: absolute;
+  top: 45px;
+  left: -30px;
+}
+
+.angel {
+    position: absolute;
+    bottom: 100px;
+    left: 300px;
+}
+
+.peter2 {
+  position: absolute;
+  top: 90px;
+  left: 80px;
+}

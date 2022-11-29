@@ -62,6 +62,7 @@ gsap.to(".simon", {
   y: 200,
   alpha: 0,
 });
+
 gsap.to(".paul", {
   scrollTrigger: {
     scroller: ".drawer-content",
@@ -71,6 +72,7 @@ gsap.to(".paul", {
   },
   x: 300,
 });
+
 gsap.to(".paul", {
   scrollTrigger: {
     scroller: ".drawer-content",
