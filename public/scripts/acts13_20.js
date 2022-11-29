@@ -14,7 +14,7 @@ function addPlace(label, coords, text, acts = null) {
 addPlace(
   "Cyprus",
   [["1050%", "500%"]],
-  `Paul traveled from Antioch to Cyprus. There they met Bar-Jesus, a sourcerer
+  `Paul traveled from Antioch to Cyprus. There they met Bar-Jesus, a sorcerer
 and false prophet. Bar-Jesus, <i>also called Elymas</i>, was cursed by Saul,
 <i class="underline font-bold">also called Paul</i>.`,
   "13:4"
