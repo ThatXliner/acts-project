@@ -72,3 +72,41 @@
   <img class="h-96 jailcell" src="assets/images/acts10_12/jail.svg" />
   <img class="h-96 angel" src="assets/images/characters/angel.svg" />
 </div>
+
+<link rel="stylesheet" href="assets/styles/quiz.css" />
+<link rel="stylesheet" href="assets/styles/acts10_12.css" />
+
+<div id="quiz" class="p-10">
+  <h1 class="font-bold text-5xl">Quiz</h1>
+  <meta name="correct" content="4" />
+  <h1 class="text-4xl mt-2">What was the meaning of Peter's vision?</h1>
+  <div class="radio-toolbar">
+    <form name="quiz">
+      <input type="radio" id="option1" name="quizOptions" value="option1" />
+      <label for="option1"
+        ><span class="optionLetter A">A</span
+        ><span class="quizAnswer"
+          >That we are now allowed to eat the things that were 'unclean'.</span
+        ></label
+      >
+      <input type="radio" id="option2" name="quizOptions" value="option2" />
+      <label for="option2"
+        ><span class="optionLetter B">B</span
+        ><span class="quizAnswer">That there would be food delivered from the sky in the coming days.</span></label
+      >
+      <input type="radio" id="option3" name="quizOptions" value="option3" />
+      <label for="option3">
+        <span class="optionLetter C">C</span>
+        <span class="quizAnswer">That people should eat pork instead of beef.</span>
+      </label>
+      <input type="radio" id="option4" name="quizOptions" value="option4" />
+      <label for="option4"
+        ><span class="optionLetter D">D</span
+        ><span class="quizAnswer">That the gospel message should be spread to Gentiles, too.</span></label
+      >
+    </form>
+    <class id="quizOutput" class="text-2xl font-bold">
+      Click an option to see if you are correct!
+    </class>
+  </div>
+</div>
