@@ -1,4 +1,3 @@
-
 gsap.from("#titles", {
   scrollTrigger: {
     scroller: ".drawer-content",
@@ -158,4 +157,162 @@ gsap.to(".words6", {
     end: "900px 0",
   },
   color: "#000000",
+});
+
+gsap.from(".words1", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".words1",
+    scrub: true,
+    start: "-850% 0",
+    end: "-800% start",
+  },
+  opacity: 0,
+});
+gsap.to(".words1", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".words1",
+    scrub: true,
+    start: "-400% 0",
+
+    end: "-350% start",
+  },
+  immediateRender: false,
+  opacity: 0,
+});
+
+gsap.from(".words2", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".words2",
+    scrub: true,
+    start: "-500% 0",
+    end: "-450% start",
+  },
+  opacity: 0,
+});
+gsap.to(".words2", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".words2",
+    scrub: true,
+    start: "-300% 0",
+    end: "0px start",
+  },
+  immediateRender: false,
+  opacity: 0,
+});
+
+gsap.from(".words3", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".words3",
+    scrub: true,
+    start: "-350% 0",
+    end: "-300% start",
+  },
+  opacity: 0,
+});
+gsap.to(".words3", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".words3",
+    scrub: true,
+    start: "-20% 0",
+    end: "0px start",
+  },
+  immediateRender: false,
+  opacity: 0,
+});
+
+gsap.from(".words4", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".words4",
+
+    scrub: true,
+    start: "-290% 0",
+    end: "-270% start",
+  },
+  opacity: 0,
+});
+gsap.to(".words4", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".words4",
+
+    scrub: true,
+    start: "0 0",
+    end: "20% start",
+  },
+  immediateRender: false,
+  opacity: 0,
+});
+gsap.from(".words5", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".words5",
+
+    scrub: true,
+    start: "-290% 0",
+    end: "-270% start",
+  },
+  opacity: 0,
+});
+gsap.to(".words5", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".words5",
+
+    scrub: true,
+    start: "0 0",
+    end: "20% start",
+  },
+  immediateRender: false,
+  opacity: 0,
+});
+gsap.from(".words6", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".words6",
+
+    scrub: true,
+    start: "-240% 0",
+    end: "-230% start",
+  },
+  opacity: 0,
+});
+gsap.to(".words6", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".words6",
+
+    scrub: true,
+    start: "0 0",
+    end: "20% start",
+  },
+  immediateRender: false,
+  opacity: 0,
+});
+gsap.from(".words7", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".words7",
+    scrub: true,
+    start: "-500% 0",
+    end: "-430% start",
+  },
+  opacity: 0,
+});
+gsap.to(".words7", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".words7",
+    scrub: true,
+    start: "0 0",
+    end: "20% start",
+  },
+  immediateRender: false,
+  opacity: 0,
 });
