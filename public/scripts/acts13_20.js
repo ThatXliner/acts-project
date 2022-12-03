@@ -251,13 +251,15 @@ addPlace(
 let boatTimeline = gsap.timeline();
 let labels = [];
 
-for (let place of places) {
+for (let i = 0; i < places.length; i++) {
+  const place = places[i];
   const label = place[0];
   boatTimeline.addLabel(label);
   labels.push(label);
   let coords = place[1];
+  let innerAniTimeline = gsap.timeline();
+  innerAniTimeline.set(REPLAY_BUTTON, { opacity: 0 });
   if (Array.isArray(coords)) {
-    let innerAniTimeline = gsap.timeline();
     for (let coord of coords) {
       innerAniTimeline.to(BOAT, {
         x: coord[0],
@@ -265,10 +267,11 @@ for (let place of places) {
         duration: coords.length <= 3 ? 1 : 0.42,
       });
     }
-    boatTimeline.add(innerAniTimeline, label);
   } else {
-    boatTimeline.add(coords, label);
+    innerAniTimeline.add(coords);
   }
+  innerAniTimeline.to(REPLAY_BUTTON, { opacity: 100 });
+  boatTimeline.add(innerAniTimeline, label);
 
   boatTimeline.to(chapterContent, { text: { value: place[2] } }, label);
   if (place[4] !== null) {
@@ -278,6 +281,17 @@ for (let place of places) {
       label
     );
   }
+  boatTimeline.call(
+    (label, newLabel, timeline) => {
+      REPLAY_BUTTON.onclick = () => {
+        gsap.set(REPLAY_BUTTON, { opacity: 0 });
+        timeline.tweenFromTo(label, newLabel);
+        gsap.set(REPLAY_BUTTON, { opacity: 100 });
+      };
+    },
+    [i == 0 ? 0 : places[i - 1][0], label, boatTimeline],
+    label
+  );
 }
 boatTimeline.addLabel("end");
 labels.push("end");
