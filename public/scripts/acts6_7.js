@@ -18,7 +18,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-gsap.from(".disciples div", { y: 100, opacity: 0, stagger: 0.1 });
+gsap.from(".disciples div", { y: 100, autoAlpha: 0, stagger: 0.1 });
 gsap.from(".header h1", {
   x: 100,
   duration: 0.5,
@@ -51,7 +51,7 @@ document.querySelectorAll(".disciples div").forEach((e, i) => {
       scrub: true,
     },
     immediateRender: false, // or else they'll "fade instantly"
-    opacity: 0,
+    autoAlpha: 0,
     y: 50 * (i + 1),
   });
 });
@@ -81,7 +81,7 @@ gsap.from("#sanhedrin", {
     end: "+=200",
   },
   duration: 1,
-  opacity: 0,
+  autoAlpha: 0,
 });
 gsap.from("#sanhedrin", {
   scrollTrigger: {
@@ -101,7 +101,7 @@ gsap.to(".disciple-choosing", {
     start: 900,
     end: "+=200px",
   },
-  opacity: 0,
+  autoAlpha: 0,
   x: -500,
 });
 gsap.from(".scene-stoning", {
@@ -112,7 +112,7 @@ gsap.from(".scene-stoning", {
     start: "-200px top",
     end: "+=200px",
   },
-  opacity: 0,
+  autoAlpha: 0,
   x: 500,
 });
 // MARK: Text transition
@@ -125,7 +125,7 @@ gsap.to(texts[0], {
     start: 0,
     end: "+=25%",
   },
-  opacity: 0,
+  autoAlpha: 0,
   y: -50,
 });
 gsap.from(texts[1], {
@@ -136,7 +136,7 @@ gsap.from(texts[1], {
     start: 300,
     end: "+=100px",
   },
-  opacity: 0,
+  autoAlpha: 0,
 });
 gsap.from(texts[2], {
   scrollTrigger: {
@@ -146,7 +146,7 @@ gsap.from(texts[2], {
     start: 40,
     end: "+=500px",
   },
-  opacity: 0,
+  autoAlpha: 0,
   y: 100,
 });
 
@@ -199,7 +199,7 @@ gsap.to(".scene-stoning .stephen-alive", {
     end: `${rockContacts[rockContacts.length - 1]}px`,
     scrub: true,
   },
-  opacity: 0,
+  autoAlpha: 0,
 });
 gsap.from(".scene-stoning .stephen-dead", {
   scrollTrigger: {
@@ -209,7 +209,7 @@ gsap.from(".scene-stoning .stephen-dead", {
     end: `${rockContacts[rockContacts.length - 1]}px`,
     scrub: true,
   },
-  opacity: 0,
+  autoAlpha: 0,
 });
 
 for (let i = 0; i < rockContacts.length; i++) {
