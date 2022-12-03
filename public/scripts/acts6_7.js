@@ -117,6 +117,31 @@ gsap.from(".scene-stoning", {
 });
 // MARK: Text transition (out)
 const texts = document.querySelector("#text").children;
+function animateText(element, start, duration = 100) {
+  gsap.from(element, {
+    scrollTrigger: {
+      scroller: ".drawer-content",
+      trigger: "#text",
+      scrub: true,
+      start: start,
+      end: "+=100",
+    },
+    opacity: 0,
+    // y: -50,
+  });
+  gsap.to(element, {
+    scrollTrigger: {
+      scroller: ".drawer-content",
+      trigger: "#text",
+      scrub: true,
+      start: start + duration + 100,
+      end: "+=100",
+    },
+    immediateRender: false,
+    opacity: 0,
+    // y: -50,
+  });
+}
 gsap.to(texts[0], {
   scrollTrigger: {
     scroller: ".drawer-content",
@@ -126,64 +151,13 @@ gsap.to(texts[0], {
     end: "+=100",
   },
   opacity: 0,
-  y: -50,
+  // y: -50,
 });
-gsap.to(texts[1], {
-  scrollTrigger: {
-    scroller: ".drawer-content",
-    trigger: texts[1],
-    scrub: true,
-    start: 300,
-    end: "+=100",
-  },
-  opacity: 0,
-  y: -50,
-});
-gsap.to(texts[2], {
-  scrollTrigger: {
-    scroller: ".drawer-content",
-    trigger: texts[1],
-    scrub: true,
-    start: 500,
-    end: "+=100",
-  },
-  opacity: 0,
-  y: -50,
-});
-gsap.to(texts[3], {
-  scrollTrigger: {
-    scroller: ".drawer-content",
-    trigger: texts[1],
-    scrub: true,
-    start: 800,
-    end: "+=100",
-  },
-  opacity: 0,
-  y: -50,
-});
-gsap.to(texts[4], {
-  scrollTrigger: {
-    scroller: ".drawer-content",
-    trigger: texts[1],
-    scrub: true,
-    start: 1200,
-    end: "+=100",
-  },
-  opacity: 0,
-  y: -50,
-});
-gsap.to(texts[5], {
-  scrollTrigger: {
-    scroller: ".drawer-content",
-    trigger: texts[1],
-    scrub: true,
-    start: 1400,
-    end: "+=100",
-  },
-  opacity: 0,
-  y: -50,
-});
-
+animateText(texts[1], 30);
+animateText(texts[2], 500);
+animateText(texts[3], 800);
+animateText(texts[4], 1200);
+animateText(texts[5], 1400);
 gsap.to(".scene-stoning", {
   scrollTrigger: {
     scroller: ".drawer-content",
