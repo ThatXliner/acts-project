@@ -1,10 +1,57 @@
+gsap.to("#intro", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: "#intro",
+    pin: "#intro",
+    start: "-50px 0",
+    end: "500px start",
+    pinSpacing: "false",
+  },
+});
+
+gsap.to(".introwords", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: "introwords",
+    scrub: 1,
+    start: "300px 0",
+    end: "200px start",
+  },
+  immediateRender: false,
+  x: -650,
+});
+
+gsap.to(".endwords", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".endwords",
+    scrub: 1,
+    start: "3400px 0",
+    end: "200px start",
+  },
+  immediateRender: false,
+  x: -650,
+});
+
+gsap.to("#Jerusalem", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: "#Jerusalem",
+    scrub: 1,
+    start: "100px 0",
+    end: "50px start",
+  },
+  immediateRender: false,
+  x: -500,
+});
+
 gsap.to("#scene1", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: "#scene1",
     pin: "#scene1",
-    start: "-50px 0",
-    end: "1800px start",
+    start: "950px 0",
+    end: "2800px start",
     pinSpacing: "false",
   },
 });
@@ -14,8 +61,8 @@ gsap.to(".paularrested", {
     scroller: ".drawer-content",
     trigger: "paularrested",
     scrub: true,
-    start: "400px 0px",
-    end: "1000px 0px",
+    start: "1700px 0px",
+    end: "2000px 0px",
   },
   ease: "out",
   x: "120%",
@@ -26,8 +73,8 @@ gsap.to(".paularrested", {
     scroller: ".drawer-content",
     trigger: "paularrested",
     scrub: 1,
-    start: "1200px 0px",
-    end: "1000px 0px",
+    start: "2200px 0px",
+    end: "2000px 0px",
   },
   ease: "out",
   y: "-=" + 200,
@@ -38,8 +85,8 @@ gsap.to(".lectern", {
     scroller: ".drawer-content",
     trigger: "lectern",
     scrub: 1,
-    start: "1200px 0px",
-    end: "1700px 0px",
+    start: "2200px 0px",
+    end: "2700px 0px",
   },
   ease: "out",
   x: "-525%",
@@ -51,8 +98,8 @@ tl.to(".map", {
     scroller: ".drawer-content",
     trigger: "map",
     scrub: true,
-    start: "400px 0px",
-    end: "1000px 0px",
+    start: "1700px 0px",
+    end: "2000px 0px",
   },
   ease: "out",
   x: 500,
@@ -61,8 +108,8 @@ tl.to(".map", {
     scroller: ".drawer-content",
     trigger: "map",
     scrub: true,
-    start: "1800px 0px",
-    end: "1900px 0px",
+    start: "2800px 0px",
+    end: "2900px 0px",
   },
   y: -100,
 });
@@ -72,8 +119,8 @@ gsap.from(".words1", {
     scroller: ".drawer-content",
     trigger: "words1",
     scrub: 1,
-    start: "0px 0px",
-    end: "0px 0px",
+    start: "1000px 0px",
+    end: "1000px 0px",
   },
   x: 500,
 });
@@ -83,8 +130,8 @@ gsap.from(".words2", {
     scroller: ".drawer-content",
     trigger: "words2",
     scrub: 1,
-    start: "0px 0px",
-    end: "0px 0px",
+    start: "1000px 0px",
+    end: "1000px 0px",
   },
   x: -1500,
 });
@@ -94,8 +141,8 @@ gsap.from(".words3", {
     scroller: ".drawer-content",
     trigger: "words3",
     scrub: 1,
-    start: "1700px 0px",
-    end: "1850px 0px",
+    start: "2700px 0px",
+    end: "2850px 0px",
   },
   x: 650,
 });
@@ -108,8 +155,8 @@ popup
       scroller: ".drawer-content",
       trigger: "disciples",
       scrub: 1,
-      start: "1800px 0px",
-      end: "1900px 0px",
+      start: "2800px 0px",
+      end: "2900px 0px",
     },
     y: -500,
   })
@@ -118,8 +165,8 @@ popup
       scroller: ".drawer-content",
       trigger: "disciples",
       scrub: 1,
-      start: "2000px 0px",
-      end: "2100px 0px",
+      start: "3000px 0px",
+      end: "3100px 0px",
     },
     x: 1200,
   });
@@ -129,34 +176,22 @@ gsap.to("#scene2", {
     scroller: ".drawer-content",
     trigger: "#scene2",
     pin: "#scene2",
-    start: "850px 0",
-    end: "2700px start",
+    start: "1850px 0",
+    end: "3700px start",
     pinSpacing: "false",
   },
-});
-
-gsap.to("#jesus", {
-  scrollTrigger: {
-    scroller: ".drawer-content",
-    trigger: "#jesus",
-    scrub: 1,
-    start: "950px 0",
-    end: "950px 0",
-  },
-  immediateRender: false,
-  x: 100,
 });
 
 let paulescape = gsap.timeline();
 
 paulescape
-  .to("#jesus", {
+  .to("#paul2", {
     scrollTrigger: {
       scroller: ".drawer-content",
-      trigger: "#jesus",
+      trigger: "#paul2",
       scrub: true,
-      start: "0 0",
-      end: "400px 0",
+      start: "550 0",
+      end: "800px 0",
     },
     immediateRender: false,
     x: 600,
@@ -166,7 +201,7 @@ paulescape
       scroller: ".drawer-content",
       trigger: "#knife",
       scrub: 1,
-      start: "500px 0",
+      start: "1000px 0",
       end: "200px start",
     },
     immediateRender: false,
@@ -177,7 +212,7 @@ paulescape
       scroller: ".drawer-content",
       trigger: "words4",
       scrub: 1,
-      start: "3600px 0",
+      start: "5100px 0",
       end: "200px start",
     },
     immediateRender: false,
@@ -188,20 +223,20 @@ paulescape
       scroller: ".drawer-content",
       trigger: "words5",
       scrub: 1,
-      start: "3600px 0",
+      start: "5100px 0",
       end: "200px start",
     },
     immediateRender: false,
     x: -650,
   })
-  .to("#jesus", {
+  .to("#paul2", {
     scrollTrigger: {
       scroller: ".drawer-content",
-      trigger: "#jesus",
-      scrub: true,
-      start: "750px 0",
+      trigger: "#paul2",
+      scrub: 2,
+      start: "1000px 0",
       end: "850px start",
     },
     immediateRender: false,
-    y: -400,
+    y: -700,
   });
