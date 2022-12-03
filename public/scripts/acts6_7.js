@@ -34,6 +34,7 @@ gsap.to(".disciple-choosing", {
     trigger: ".disciple-choosing",
     start: 0,
     pin: true,
+    pinSpacing: "fixed",
     end: "+=200",
   },
 });
@@ -89,6 +90,7 @@ gsap.from("#sanhedrin", {
     trigger: ".disciple-choosing",
     scrub: true,
     end: "+=1300px",
+    pinSpacing: "fixed",
     pin: true,
   },
 });
@@ -164,6 +166,7 @@ gsap.to(".scene-stoning", {
     trigger: ".scene-stoning",
     end: "+=150px",
     pin: true,
+    pinSpacing: "fixed"
   },
 });
 document.querySelectorAll("#rocks > img").forEach((element) => {
