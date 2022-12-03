@@ -135,10 +135,10 @@ gsap.to("#scene2", {
   },
 });
 
-gsap.to("#paul2", {
+gsap.to("#jesus", {
   scrollTrigger: {
     scroller: ".drawer-content",
-    trigger: "#paul2",
+    trigger: "#jesus",
     scrub: 1,
     start: "950px 0",
     end: "950px 0",
@@ -150,10 +150,10 @@ gsap.to("#paul2", {
 let paulescape = gsap.timeline();
 
 paulescape
-  .to("#paul2", {
+  .to("#jesus", {
     scrollTrigger: {
       scroller: ".drawer-content",
-      trigger: "#paul2",
+      trigger: "#jesus",
       scrub: true,
       start: "0 0",
       end: "400px 0",
@@ -194,10 +194,10 @@ paulescape
     immediateRender: false,
     x: -650,
   })
-  .to("#paul2", {
+  .to("#jesus", {
     scrollTrigger: {
       scroller: ".drawer-content",
-      trigger: "#paul2",
+      trigger: "#jesus",
       scrub: true,
       start: "750px 0",
       end: "850px start",
