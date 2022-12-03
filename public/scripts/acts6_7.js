@@ -34,7 +34,6 @@ gsap.to(".disciple-choosing", {
     trigger: ".disciple-choosing",
     start: 0,
     pin: true,
-    pinType: "fixed",
     end: "+=200",
   },
 });
