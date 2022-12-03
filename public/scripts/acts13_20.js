@@ -207,6 +207,47 @@ addPlace(
   `They went to Chios, Samos, and Miletus. Paul was in a hurry to reach Jerusalem.`,
   "20:15-16"
 );
+addPlace(
+  "Talk",
+  [],
+  `"From Miletus, Paul sent to Ephesus for the elders of the church." He than spoke a great goodbye speech for it may be the last time they meet.`,
+  "20:17-38"
+);
+addPlace(
+  "Kos-Rhodes-Patara",
+  [
+    ["790%", "370%"],
+    ["790%", "420%"],
+    ["880%", "400%"],
+  ],
+  `"After we had torn ourselves away from them, " Paul and his companions sailed to Kos, Rhodes, and Patara`,
+  "21:1"
+);
+
+addPlace(
+  "Tyre",
+  [
+    ["1050%", "500%"],
+    ["1200%", "600%"],
+  ],
+  `They then went on board a ship crossing Phoenicia. They sighted Cyprus and sailed on to Syria, where they ended at Tyre.`,
+  "21:2-3"
+);
+addPlace(
+  "Ptolemais-Caesarea-Jerusalem prophet",
+  [
+    ["1190%", "620%"],
+    ["1170%", "640%"],
+  ],
+  `They then went from Tyre to Ptolemais. The day after that, the went to Caesarea. They stayed at Philip the evangelist's home. He was one of the seven people chosen to lead. Several days later, Agabus, a prophet, told Paul that the Jewish leaders in Jerusalem will hand Paul over to the Gentiles. Paul was all ready to do this for Jesus. <b>And so he went to Jerusalem</b>`,
+  "21:7-15"
+);
+addPlace(
+  "jeru last",
+  [["1200%", "700%"]],
+  `They finally arrived at Jerusalem. See what will happen next in the <spa-link to="acts21_25" class="link link-accent">Next chapter</spa-link>`,
+  "21:17 "
+);
 // jeru stuff
 // addPlace(
 //   "Jeru-Mace-Achaia",
