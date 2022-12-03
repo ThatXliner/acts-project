@@ -248,14 +248,6 @@ addPlace(
   `They finally arrived at Jerusalem. See what will happen next in the <spa-link to="acts21_25" class="link link-accent">Next chapter</spa-link>`,
   "21:17 "
 );
-// jeru stuff
-// addPlace(
-//   "Jeru-Mace-Achaia",
-//   [["770%", "290%"]],
-//   `Paul went to Ephesus to talk about baptism.`,
-//   "19:1"
-// );
-
 let boatTimeline = gsap.timeline();
 let labels = [];
 
@@ -266,15 +258,6 @@ for (let place of places) {
   let coords = place[1];
   if (Array.isArray(coords)) {
     let innerAniTimeline = gsap.timeline();
-    //   innerAniTimeline.set(REPLAY_BUTTON, { opacity: 0 });
-    //   innerAniTimeline.call(
-    //     (timeline, label) => {
-    //       REPLAY_BUTTON.onclick = () => {
-    //         timeline.play(label);
-    //       };
-    //     },
-    //     [boatTimeline, label]
-    //   );
     for (let coord of coords) {
       innerAniTimeline.to(BOAT, {
         x: coord[0],
@@ -282,7 +265,6 @@ for (let place of places) {
         duration: coords.length <= 3 ? 1 : 0.42,
       });
     }
-    //   innerAniTimeline.to(REPLAY_BUTTON, { opacity: 100 });
     boatTimeline.add(innerAniTimeline, label);
   } else {
     boatTimeline.add(coords, label);
@@ -299,12 +281,10 @@ for (let place of places) {
 }
 boatTimeline.addLabel("end");
 labels.push("end");
-// let cur = 0;
-let cur = labels.length - 2;
-boatTimeline.play(labels[cur]);
+let cur = 0;
 // prevent auto play
-// boatTimeline.pause();
-// boatTimeline.seek(0);
+boatTimeline.pause();
+boatTimeline.seek(0);
 // make navigation buttons work
 const prevButton = document.querySelector("#prev-btn");
 const nextButton = document.querySelector("#next-btn");
