@@ -77,8 +77,8 @@ gsap.from("#sanhedrin", {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
     scrub: true,
-    start: 40,
-    end: "center top",
+    start: 500,
+    end: "+=200",
   },
   duration: 1,
   opacity: 0,
@@ -88,23 +88,23 @@ gsap.from("#sanhedrin", {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
     scrub: true,
-    end: "+=280px",
+    end: "+=900px",
     pin: true,
   },
 });
-let transitionTimeline = gsap.timeline();
-transitionTimeline.to(".disciple-choosing", {
+
+gsap.to(".disciple-choosing", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
     scrub: true,
-    start: 500,
+    start: 900,
     end: "+=200px",
   },
   opacity: 0,
   x: -500,
 });
-transitionTimeline.from(".scene-stoning", {
+gsap.from(".scene-stoning", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".scene-stoning",
@@ -133,7 +133,17 @@ gsap.from(texts[1], {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
     scrub: true,
-    start: 20,
+    start: 300,
+    end: "+=100px",
+  },
+  opacity: 0,
+});
+gsap.from(texts[2], {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".disciple-choosing",
+    scrub: true,
+    start: 40,
     end: "+=500px",
   },
   opacity: 0,
