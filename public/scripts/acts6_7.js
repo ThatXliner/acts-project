@@ -46,8 +46,8 @@ document.querySelectorAll(".disciples div").forEach((e, i) => {
     scrollTrigger: {
       scroller: ".drawer-content",
       trigger: ".disciple-choosing",
-      start: 10 * (i + 1),
-      end: 200,
+      start: 200 + 10 * (i + 1),
+      end: 400,
       scrub: true,
     },
     immediateRender: false, // or else they'll "fade instantly"
@@ -61,8 +61,8 @@ gsap.to(".disciples div:first-child", {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
     scrub: true,
-    start: 40,
-    end: "center top",
+    start: 240,
+    end: "+=200",
     ease: "linear",
   },
   duration: 1,
@@ -77,7 +77,7 @@ gsap.from("#sanhedrin", {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
     scrub: true,
-    start: 500,
+    start: 900,
     end: "+=200",
   },
   duration: 1,
@@ -88,7 +88,7 @@ gsap.from("#sanhedrin", {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
     scrub: true,
-    end: "+=900px",
+    end: "+=1300px",
     pin: true,
   },
 });
@@ -98,7 +98,7 @@ gsap.to(".disciple-choosing", {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
     scrub: true,
-    start: 900,
+    start: 1600,
     end: "+=200px",
   },
   opacity: 0,
@@ -115,39 +115,73 @@ gsap.from(".scene-stoning", {
   opacity: 0,
   x: 500,
 });
-// MARK: Text transition
+// MARK: Text transition (out)
 const texts = document.querySelector("#text").children;
 gsap.to(texts[0], {
   scrollTrigger: {
     scroller: ".drawer-content",
-    trigger: ".disciple-choosing",
+    trigger: texts[0],
     scrub: true,
     start: 0,
-    end: "+=25%",
+    end: "+=100",
   },
   opacity: 0,
   y: -50,
 });
-gsap.from(texts[1], {
+gsap.to(texts[1], {
   scrollTrigger: {
     scroller: ".drawer-content",
-    trigger: ".disciple-choosing",
+    trigger: texts[1],
     scrub: true,
     start: 300,
-    end: "+=100px",
+    end: "+=100",
   },
   opacity: 0,
+  y: -50,
 });
-gsap.from(texts[2], {
+gsap.to(texts[2], {
   scrollTrigger: {
     scroller: ".drawer-content",
-    trigger: ".disciple-choosing",
+    trigger: texts[1],
     scrub: true,
-    start: 40,
-    end: "+=500px",
+    start: 500,
+    end: "+=100",
   },
   opacity: 0,
-  y: 100,
+  y: -50,
+});
+gsap.to(texts[3], {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: texts[1],
+    scrub: true,
+    start: 800,
+    end: "+=100",
+  },
+  opacity: 0,
+  y: -50,
+});
+gsap.to(texts[4], {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: texts[1],
+    scrub: true,
+    start: 1200,
+    end: "+=100",
+  },
+  opacity: 0,
+  y: -50,
+});
+gsap.to(texts[5], {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: texts[1],
+    scrub: true,
+    start: 1400,
+    end: "+=100",
+  },
+  opacity: 0,
+  y: -50,
 });
 
 gsap.to(".scene-stoning", {
