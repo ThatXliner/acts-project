@@ -3,6 +3,7 @@ gsap.from("#titles", {
     scroller: ".drawer-content",
     trigger: "#titles",
     pin: "#titles",
+    pinType: "fixed",
     start: "-50px 0",
     end: "1200px start",
   },
@@ -12,6 +13,7 @@ gsap.to("#scene1", {
     scroller: ".drawer-content",
     trigger: "#scene1",
     pin: "#scene1",
+    pinType: "fixed",
     start: "-50px 0",
     end: "1200px start",
     pinSpacing: "false",
@@ -22,6 +24,7 @@ gsap.to("#scene2", {
     scroller: ".drawer-content",
     trigger: "#scene2",
     pin: "#scene2",
+    pinType: "fixed",
     start: "-50px 0",
     end: "1200px start",
     pinSpacing: "false",
@@ -35,7 +38,7 @@ gsap.from(".dove", {
     start: "50px 0",
     end: "200px start",
   },
-  alpha: 0,
+  autoAlpha: 0,
   x: -400,
   ease: "in",
 });
@@ -50,7 +53,7 @@ gsap.from(".simon", {
     end: "500px start",
   },
   //   immediateRender: false,
-  alpha: 0,
+  autoAlpha: 0,
   y: 200,
 });
 gsap.to(".simon", {
@@ -63,7 +66,7 @@ gsap.to(".simon", {
   },
   immediateRender: false,
   y: 200,
-  alpha: 0,
+  autoAlpha: 0,
 });
 
 gsap.to(".paul", {
@@ -105,7 +108,7 @@ gsap.from(".jesus", {
     start: "100px 0",
   },
   y: -200,
-  alpha: 0,
+  autoAlpha: 0,
 });
 
 gsap
@@ -135,7 +138,7 @@ gsap.to(".jesus", {
   },
   y: -200,
   immediateRender: false,
-  alpha: 0,
+  autoAlpha: 0,
 });
 gsap.from(".annanias", {
   scrollTrigger: {
@@ -147,7 +150,7 @@ gsap.from(".annanias", {
     end: "900px 0",
   },
   x: -200,
-  alpha: 0,
+  autoAlpha: 0,
 });
 
 gsap.to(".words6", {
