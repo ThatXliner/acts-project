@@ -232,3 +232,12 @@ body {
   height: auto;
   opacity: 0%;
 }
+
+#quiz {
+  top: 110%;
+}
+
+.spacing {
+  height: 20%;
+  position: absolute;
+}

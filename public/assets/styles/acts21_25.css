@@ -151,3 +151,8 @@
 .scroll {
   margin-top: 800%;
 }
+
+#quiz {
+  position: absolute;
+  top: 190%;
+}
