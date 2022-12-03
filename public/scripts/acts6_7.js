@@ -90,8 +90,8 @@ gsap.from("#sanhedrin", {
     trigger: ".disciple-choosing",
     scrub: true,
     end: "+=1300px",
-    pinSpacing: "fixed",
     pin: true,
+    pinSpacing: "fixed",
   },
 });
 
