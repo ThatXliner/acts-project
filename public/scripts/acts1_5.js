@@ -3,8 +3,8 @@ gsap.to("#scene1", {
     scroller: ".drawer-content",
     trigger: "#scene1",
     pin: "#scene1",
-    start: "280px 0",
-    end: "3500px start",
+    start: "330px 0",
+    end: "3600px start",
     pinSpacing: "false",
   },
 });
