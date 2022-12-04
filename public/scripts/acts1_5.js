@@ -3,8 +3,8 @@ gsap.to("#scene1", {
     scroller: ".drawer-content",
     trigger: "#scene1",
     pin: "#scene1",
-    start: "330px 0",
-    end: "3600px start",
+    start: "280px 0",
+    end: "3500px start",
     pinSpacing: "false",
   },
 });
@@ -55,16 +55,30 @@ asc
     y: -700,
   });
 
-gsap.to(".jesusgradient", {
-  scrollTrigger: {
-    scroller: ".drawer-content",
-    trigger: "jesusgradient",
-    scrub: 1,
-    start: "1100px 0px",
-    end: "1200px 0px",
-  },
-  x: -1500,
-});
+let jsg = gsap.timeline();
+
+jsg
+  .from(".jesusgradient", {
+    scrollTrigger: {
+      scroller: ".drawer-content",
+      trigger: "jesusgradient",
+      scrub: 1,
+      start: "800px 0px",
+      end: "1000px 0px",
+    },
+    y: -200,
+    opacity: -2,
+  })
+  .to(".jesusgradient", {
+    scrollTrigger: {
+      scroller: ".drawer-content",
+      trigger: "jesusgradient",
+      scrub: 1,
+      start: "1100px 0px",
+      end: "1200px 0px",
+    },
+    x: -1500,
+  });
 
 gsap.to(".jesus", {
   scrollTrigger: {

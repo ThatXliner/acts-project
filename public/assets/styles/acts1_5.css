@@ -2,21 +2,21 @@
   position: absolute;
   right: 190px;
   height: 850px;
-  top: 505px;
+  top: 405px;
 }
 
 .jesus {
   position: absolute;
   left: -40px;
   height: 400px;
-  top: 600px;
+  top: 500px;
 }
 
 .jesusgradient {
   position: absolute;
   right: 525px;
   height: 400px;
-  top: 440px;
+  top: 275px;
 }
 
 .ascension {
@@ -24,7 +24,7 @@
   right: 400px;
   height: 400px;
   width: 700px;
-  top: 550px;
+  top: 400px;
 }
 
 .return {
@@ -32,7 +32,7 @@
   right: 550px;
   height: 400px;
   width: 700px;
-  top: 450px;
+  top: 350px;
 }
 
 .now {
@@ -40,7 +40,7 @@
   right: 575px;
   height: 400px;
   width: 700px;
-  top: 450px;
+  top: 350px;
 }
 
 .lies {
@@ -62,7 +62,7 @@
 .angel1 {
   position: absolute;
   width: 350px;
-  top: 350px;
+  top: 250px;
   right: 200px;
   transform: rotate(-25deg);
 }
@@ -70,7 +70,7 @@
 .angel2 {
   position: absolute;
   width: 350px;
-  top: 350px;
+  top: 250px;
   left: -200px;
   transform: rotate(25deg);
 }
@@ -120,6 +120,13 @@
 .paul {
   position: absolute;
   right: 100px;
+  height: 500px;
+  top: 2800px;
+}
+
+.lameman {
+  position: absolute;
+  left: 100px;
   height: 500px;
   top: 2800px;
 }
