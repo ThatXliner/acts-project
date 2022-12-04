@@ -3,6 +3,7 @@ gsap.to("#scene1", {
     scroller: ".drawer-content",
     trigger: "#scene1",
     pin: "#scene1",
+    pinType: "fixed",
     start: "-50px 0",
     end: "1800px start",
     pinSpacing: "false",
@@ -14,6 +15,7 @@ gsap.to("#scene2", {
     scroller: ".drawer-content",
     trigger: "#scene2",
     pin: "#scene2",
+    pinType: "fixed",
     start: "0px 0",
     end: "3500px start",
   },
@@ -27,7 +29,7 @@ gsap.from(".person1", {
     end: "1400px 0",
   },
   x: -100,
-  opacity: 0,
+  autoAlpha: 0,
 });
 gsap.from(".dove", {
   scrollTrigger: {
@@ -38,7 +40,7 @@ gsap.from(".dove", {
     end: "1700px 0",
   },
   y: -100,
-  opacity: 0,
+  autoAlpha: 0,
 });
 gsap.to(".peter", {
   scrollTrigger: {
@@ -60,7 +62,7 @@ gsap.from(".sheet", {
     end: "1000px 0px",
   },
   ease: "out",
-  opacity: 0,
+  autoAlpha: 0,
   y: -500,
 });
 gsap.to(".sheet", {
@@ -73,7 +75,7 @@ gsap.to(".sheet", {
   },
   immediateRender: false,
   ease: "out",
-  opacity: 0,
+  autoAlpha: 0,
   y: -500,
 });
 
@@ -86,7 +88,7 @@ gsap.from(".jailcell", {
     end: "1800px; 0px",
   },
   ease: "out",
-  opacity: 0,
+  autoAlpha: 0,
   y: -500,
 });
 gsap.from(".angel", {
@@ -98,7 +100,7 @@ gsap.from(".angel", {
     end: "1800px; 0px",
   },
   ease: "out",
-  opacity: 0,
+  autoAlpha: 0,
   height: 0,
   x: 500,
 });
@@ -113,7 +115,7 @@ gsap.to(".jailcell", {
   },
   immediateRender: false,
   ease: "out",
-  opacity: 0,
+  autoAlpha: 0,
   height: 1000,
 });
 
@@ -125,7 +127,7 @@ gsap.from(".words1", {
     start: "-850% 0",
     end: "-800% start",
   },
-  opacity: 0,
+  autoAlpha: 0,
 });
 gsap.to(".words1", {
   scrollTrigger: {
@@ -136,7 +138,7 @@ gsap.to(".words1", {
     end: "-350% start",
   },
   immediateRender: false,
-  opacity: 0,
+  autoAlpha: 0,
 });
 
 gsap.from(".words2", {
@@ -147,7 +149,7 @@ gsap.from(".words2", {
     start: "-450% 0",
     end: "-400% start",
   },
-  opacity: 0,
+  autoAlpha: 0,
 });
 gsap.to(".words2", {
   scrollTrigger: {
@@ -158,7 +160,7 @@ gsap.to(".words2", {
     end: "0px start",
   },
   immediateRender: false,
-  opacity: 0,
+  autoAlpha: 0,
 });
 
 gsap.from(".words3", {
@@ -169,7 +171,7 @@ gsap.from(".words3", {
     start: "-350% 0",
     end: "-300% start",
   },
-  opacity: 0,
+  autoAlpha: 0,
 });
 gsap.to(".words3", {
   scrollTrigger: {
@@ -180,7 +182,7 @@ gsap.to(".words3", {
     end: "0px start",
   },
   immediateRender: false,
-  opacity: 0,
+  autoAlpha: 0,
 });
 
 gsap.from(".words4", {
@@ -192,7 +194,7 @@ gsap.from(".words4", {
     start: "-290% 0",
     end: "-270% start",
   },
-  opacity: 0,
+  autoAlpha: 0,
 });
 gsap.to(".words4", {
   scrollTrigger: {
@@ -204,7 +206,7 @@ gsap.to(".words4", {
     end: "20% start",
   },
   immediateRender: false,
-  opacity: 0,
+  autoAlpha: 0,
 });
 gsap.from(".words5", {
   scrollTrigger: {
@@ -215,7 +217,7 @@ gsap.from(".words5", {
     start: "-290% 0",
     end: "-270% start",
   },
-  opacity: 0,
+  autoAlpha: 0,
 });
 gsap.to(".words5", {
   scrollTrigger: {
@@ -227,7 +229,7 @@ gsap.to(".words5", {
     end: "20% start",
   },
   immediateRender: false,
-  opacity: 0,
+  autoAlpha: 0,
 });
 gsap.from(".words6", {
   scrollTrigger: {
@@ -238,7 +240,7 @@ gsap.from(".words6", {
     start: "-240% 0",
     end: "-230% start",
   },
-  opacity: 0,
+  autoAlpha: 0,
 });
 gsap.to(".words6", {
   scrollTrigger: {
@@ -250,7 +252,7 @@ gsap.to(".words6", {
     end: "20% start",
   },
   immediateRender: false,
-  opacity: 0,
+  autoAlpha: 0,
 });
 gsap.from(".words7", {
   scrollTrigger: {
@@ -260,7 +262,7 @@ gsap.from(".words7", {
     start: "-500% 0",
     end: "-430% start",
   },
-  opacity: 0,
+  autoAlpha: 0,
 });
 gsap.to(".words7", {
   scrollTrigger: {
@@ -271,5 +273,5 @@ gsap.to(".words7", {
     end: "20% start",
   },
   immediateRender: false,
-  opacity: 0,
+  autoAlpha: 0,
 });
