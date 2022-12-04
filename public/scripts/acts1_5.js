@@ -63,7 +63,7 @@ gsap.to(".jesusgradient", {
     start: "1100px 0px",
     end: "1200px 0px",
   },
-  x: -1000,
+  x: -1500,
 });
 
 gsap.to(".jesus", {
