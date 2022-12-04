@@ -78,7 +78,7 @@
 .itwd1 {
   position: absolute;
   top: 150px;
-  right: 475px;
+  right: 525px;
   height: 400px;
 }
 
@@ -124,15 +124,15 @@
   right: 10%;
 }
 
-.words3 {
+.words2 {
   position: absolute;
-  top: 1100px;
+  top: 1000px;
   width: 20%;
-  right: 30%;
+  right: 450px;
   height: 200px;
 }
 
-.words4 {
+.words3 {
   position: absolute;
   top: 1890px;
   width: 500px;
@@ -140,7 +140,7 @@
   height: 400px;
 }
 
-.words5 {
+.words4 {
   position: absolute;
   top: 1950px;
   width: 700px;
