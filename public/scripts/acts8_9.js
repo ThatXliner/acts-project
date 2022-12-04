@@ -46,9 +46,7 @@ gsap.from(".simon", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".dove",
-    markers: true,
     scrub: true,
-    markers: true,
     start: "200px 0",
     end: "500px start",
   },
@@ -60,7 +58,6 @@ gsap.to(".simon", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".simon",
-    markers: true,
     start: "200px 0",
     end: "600px start",
   },
@@ -215,7 +212,6 @@ gsap.from(".words3", {
     scroller: ".drawer-content",
     trigger: ".words3",
     scrub: true,
-    markers: true,
     start: "-600% 0",
     end: "-200% start",
   },
@@ -226,7 +222,6 @@ gsap.to(".words3", {
     scroller: ".drawer-content",
     trigger: ".words3",
     scrub: true,
-    markers: true,
     start: "-20% 0",
     end: "100px start",
   },
