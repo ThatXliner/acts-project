@@ -3,6 +3,7 @@ gsap.to("#scene1", {
     scroller: ".drawer-content",
     trigger: "#scene1",
     pin: "#scene1",
+    pinType: "fixed",
     start: "280px 0",
     end: "3500px start",
     pinSpacing: "false",
@@ -14,6 +15,7 @@ gsap.to("#scene2", {
     scroller: ".drawer-content",
     trigger: "#scene2",
     pin: "#scene2",
+    pinType: "fixed",
     start: "1325px 0",
     end: "3500px start",
     pinSpacing: "false",
@@ -25,6 +27,7 @@ gsap.to("#scene3", {
     scroller: ".drawer-content",
     trigger: "#scene3",
     pin: "#scene3",
+    pinType: "fixed",
     start: "2700px 0",
     end: "5600px 0",
   },
@@ -42,7 +45,7 @@ asc
       end: "1000px 0px",
     },
     x: 700,
-    opacity: -2,
+    autoAlpha: -2,
   })
   .to(".ascension", {
     scrollTrigger: {
@@ -67,7 +70,7 @@ jsg
       end: "1000px 0px",
     },
     y: -200,
-    opacity: -2,
+    autoAlpha: -2,
   })
   .to(".jesusgradient", {
     scrollTrigger: {
@@ -177,7 +180,7 @@ gsap.from(".return", {
     end: "2900px 0",
   },
   y: -200,
-  opacity: 0,
+  autoAlpha: 0,
 });
 
 gsap.to(".lots", {
