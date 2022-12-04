@@ -1,50 +1,158 @@
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, #ffff, #ffff 70%);
-}
-
-.container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.text {
-  background: linear-gradient(90deg, #00dbde, #fc00ff);
-  font-size: 120px;
-  text-transform: uppercase;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.panel {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
 .disciples {
-  display: block;
-  background-repeat: no-repeat;
-  width: 300px;
-  height: 175px;
-  margin-top: -8%;
-  margin-left: 40%;
-  margin-right: 60%;
+  position: absolute;
+  right: 190px;
+  height: 850px;
+  top: 405px;
 }
 
 .jesus {
-  display: block;
-  margin-left: 20%;
-  margin-right: 80%;
-  margin-top: 60%;
+  position: absolute;
+  left: -40px;
+  height: 400px;
+  top: 500px;
+}
+
+.jesusgradient {
+  position: absolute;
+  right: 525px;
+  height: 400px;
+  top: 275px;
+}
+
+.ascension {
+  position: absolute;
+  right: 400px;
+  height: 400px;
+  width: 700px;
+  top: 400px;
+}
+
+.return {
+  position: absolute;
+  right: 550px;
+  height: 400px;
+  width: 700px;
+  top: 350px;
+}
+
+.now {
+  position: absolute;
+  right: 575px;
+  height: 400px;
+  width: 700px;
+  top: 350px;
+}
+
+.lies {
+  position: absolute;
+  right: 575px;
+  height: 400px;
+  width: 700px;
+  top: 2750px;
+}
+
+.dies {
+  position: absolute;
+  left: -600px;
+  height: 400px;
+  width: 700px;
+  top: 2750px;
+}
+
+.angel1 {
+  position: absolute;
+  width: 350px;
+  top: 250px;
+  right: 200px;
+  transform: rotate(-25deg);
+}
+
+.angel2 {
+  position: absolute;
+  width: 350px;
+  top: 250px;
+  left: -200px;
+  transform: rotate(25deg);
+}
+
+.priest {
+  position: absolute;
+  right: 160px;
+  width: 1500px;
+  top: 1200px;
+}
+
+.priest2 {
+  position: absolute;
+  right: -250px;
+  width: 1500px;
+  top: 2600px;
+}
+
+.annanias {
+  position: absolute;
+  left: 50px;
+  width: 350px;
+  top: 2950px;
+}
+
+.wife {
+  position: absolute;
+  left: 300px;
+  width: 350px;
+  top: 3000px;
+}
+
+.money {
+  position: absolute;
+  left: -90px;
+  width: 250px;
+  top: 3200px;
+}
+
+.matthias {
+  position: absolute;
+  left: -400px;
+  height: 500px;
+  top: 1500px;
+}
+
+.paul {
+  position: absolute;
+  right: 100px;
+  height: 500px;
+  top: 2800px;
+}
+
+.lameman {
+  position: absolute;
+  left: 100px;
+  height: 500px;
+  top: 2800px;
+}
+
+.lots {
+  position: absolute;
+  right: 575px;
+  height: 400px;
+  width: 700px;
+  top: 1350px;
+}
+
+.matthiasgradient {
+  position: absolute;
+  right: -159px;
+  height: 400px;
+  top: 1325px;
+}
+
+#quiz {
+  top: 145%;
+}
+
+.spacing {
+  height: 20%;
+  position: absolute;
 }
 
 .center-acts {
@@ -54,190 +162,6 @@ body {
   margin-top: 20%;
 }
 
-.angel1 {
-  display: block;
-  background-repeat: no-repeat;
-  width: 200px;
-  height: auto;
-  background-size: 100%;
-  margin-left: 15%;
-  margin-right: 85%;
-  margin-top: 50%;
-}
-
-.angel2 {
-  display: block;
-  background-repeat: no-repeat;
-  width: 200px;
-  height: auto;
-  background-size: 100%;
-  margin-left: 25%;
-  margin-right: 75%;
-  margin-top: -60%;
-}
-
-.holy-spirit {
-  margin-left: 35%;
-  margin-right: 65%;
-  margin-top: 70%;
-  width: 400px;
-  height: auto;
-}
-
-.matthias {
-  margin-left: 2%;
-  margin-right: 98%;
-  margin-top: 50%;
-  width: 300px;
-  height: auto;
-}
-
-.paul {
-  margin-left: 70%;
-  margin-right: 30%;
-  margin-top: 70%;
-  width: 300px;
-  height: auto;
-}
-
-.lameman {
-  margin-left: 10%;
-  margin-right: 90%;
-  margin-top: -25%;
-  width: 300px;
-  height: auto;
-}
-
-.wall {
-  margin-left: 20%;
-  margin-right: 80%;
-  margin-top: -60%;
-  margin-bottom: 10%;
-  width: 350px;
-  height: auto;
-}
-
-.priest {
-  margin-left: 60%;
-  margin-right: 40%;
-  margin-top: -10%;
-  margin-bottom: 10%;
-  width: 350px;
-  height: auto;
-}
-
-.words1 {
-  width: 350px;
-  margin-left: 65%;
-  margin-right: 35%;
-  margin-top: -90%;
-}
-
-.words2 {
-  width: 350px;
-  margin-left: 65%;
-  margin-right: 35%;
-  margin-top: -5%;
-}
-
-.words3 {
-  width: 700px;
-  margin-left: 25%;
-  margin-right: 75%;
-  margin-top: -50%;
-}
-
-.matthiaswords {
-  width: 700px;
-  margin-left: 60%;
-  margin-right: 40%;
-  margin-top: 50%;
-}
-
-.MATTHIAS {
-  width: 700px;
-  margin-left: 60%;
-  margin-right: 40%;
-  margin-top: 10%;
-}
-
-.standup {
-  width: 700px;
-  margin-left: 25%;
-  margin-right: 75%;
-  margin-top: -50%;
-}
-
-.paulpower {
-  margin-left: 30%;
-  margin-right: 70%;
-  margin-top: 30%;
-  width: 150px;
-  height: auto;
-}
-
-.annanias {
-  margin-left: 33%;
-  margin-right: 67%;
-  margin-top: -25%;
-  width: 300px;
-  height: auto;
-}
-
-.annaniasdead {
-  margin-left: 33%;
-  margin-right: 67%;
-  margin-top: 65%;
-  width: 300px;
-  height: auto;
-}
-
-.wife {
-  margin-left: 15%;
-  margin-right: 85%;
-  margin-top: -24%;
-  width: 300px;
-  height: auto;
-}
-
-.wifedead {
-  margin-left: 15%;
-  margin-right: 85%;
-  margin-top: -20%;
-  width: 300px;
-  height: auto;
-}
-
-.priestmoney {
-  margin-right: 25%;
-  margin-left: 75%;
-  margin-top: -22%;
-  width: 310px;
-  height: auto;
-}
-
-.money {
-  margin-right: 102%;
-  margin-left: -2%;
-  margin-top: -8%;
-  width: 250px;
-  height: auto;
-}
-
-.annaniaslie {
-  margin-right: 75%;
-  margin-left: 25%;
-  margin-top: -50%;
-  width: 600px;
-  height: auto;
-  opacity: 0%;
-}
-
-#quiz {
-  top: 110%;
-}
-
-.spacing {
-  height: 20%;
-  position: absolute;
+.scroll {
+  margin-top: 400%;
 }

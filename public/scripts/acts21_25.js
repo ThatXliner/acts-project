@@ -130,21 +130,10 @@ gsap.from(".words2", {
     scroller: ".drawer-content",
     trigger: "words2",
     scrub: 1,
-    start: "1000px 0px",
-    end: "1000px 0px",
+    start: "2200px 0px",
+    end: "2700px 0px",
   },
-  x: -1500,
-});
-
-gsap.from(".words3", {
-  scrollTrigger: {
-    scroller: ".drawer-content",
-    trigger: "words3",
-    scrub: 1,
-    start: "2700px 0px",
-    end: "2850px 0px",
-  },
-  x: 650,
+  x: 500,
 });
 
 let popup = gsap.timeline();
@@ -207,10 +196,10 @@ paulescape
     immediateRender: false,
     x: 250,
   })
-  .to(".words4", {
+  .to(".words3", {
     scrollTrigger: {
       scroller: ".drawer-content",
-      trigger: "words4",
+      trigger: "words3",
       scrub: 1,
       start: "5100px 0",
       end: "200px start",
@@ -218,10 +207,10 @@ paulescape
     immediateRender: false,
     x: 600,
   })
-  .to(".words5", {
+  .to(".words4", {
     scrollTrigger: {
       scroller: ".drawer-content",
-      trigger: "words5",
+      trigger: "words4",
       scrub: 1,
       start: "5100px 0",
       end: "200px start",
