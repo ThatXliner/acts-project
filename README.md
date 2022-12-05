@@ -1,7 +1,8 @@
 # Acts Project
 
-A project about the Book of Acts from the Bible.
+## What is it?
+A quick summary of the Book of Acts in the Bible, and it summarizes it through a scrolling website.
 
-If you see nothing meaningful on this page, then that's probably because there is nothing meaningful.
+## Powered by:
+GSAP (Scrolltrigger) and Vite
 
-Yet.
