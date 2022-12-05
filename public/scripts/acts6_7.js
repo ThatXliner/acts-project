@@ -46,12 +46,12 @@ document.querySelectorAll(".disciples div").forEach((e, i) => {
     scrollTrigger: {
       scroller: ".drawer-content",
       trigger: ".disciple-choosing",
-      start: 10 * (i + 1),
-      end: 200,
+      start: 200 + 10 * (i + 1),
+      end: 400,
       scrub: true,
     },
     immediateRender: false, // or else they'll "fade instantly"
-    opacity: 0,
+    autoAlpha: 0,
     y: 50 * (i + 1),
   });
 });
@@ -61,15 +61,30 @@ gsap.to(".disciples div:first-child", {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
     scrub: true,
-    start: 40,
-    end: "center top",
+    start: 240,
+    end: "+=200",
     ease: "linear",
   },
   duration: 1,
   // or else he'll "glitch down" because at the start we were animating him
   immediateRender: false,
-  scale: 1.5,
-  x: "400%",
+  scale: 3,
+  x: "100%",
+  y: "90%",
+});
+gsap.to(".disciples div:first-child", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".disciple-choosing",
+    scrub: true,
+    start: 1000,
+    end: "+=200",
+    ease: "linear",
+  },
+  // or else he'll "glitch down" because at the start we were animating him
+  immediateRender: false,
+  scale: 2,
+  x: "350%",
   y: "270%",
 });
 gsap.from("#sanhedrin", {
@@ -77,34 +92,56 @@ gsap.from("#sanhedrin", {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
     scrub: true,
-    start: 40,
-    end: "center top",
+    start: 1000,
+    end: "+=200",
   },
   duration: 1,
-  opacity: 0,
+  autoAlpha: 0,
 });
 gsap.from("#sanhedrin", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
     scrub: true,
-    end: "+=280px",
+    end: "+=1300px",
     pin: true,
+    pinType: "fixed",
   },
 });
-let transitionTimeline = gsap.timeline();
-transitionTimeline.to(".disciple-choosing", {
+gsap.from("#audience-img", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
     scrub: true,
-    start: 500,
-    end: "+=200px",
+    start: 400,
+    end: "+=300",
   },
   opacity: 0,
+});
+gsap.to("#audience-img", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".disciple-choosing",
+    scrub: true,
+    start: 1000,
+    end: "+=300",
+  },
+  immediateRender: false,
+  opacity: 0,
+});
+
+gsap.to(".disciple-choosing", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".disciple-choosing",
+    scrub: true,
+    start: 1600,
+    end: "+=200px",
+  },
+  autoAlpha: 0,
   x: -500,
 });
-transitionTimeline.from(".scene-stoning", {
+gsap.from(".scene-stoning", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".scene-stoning",
@@ -112,40 +149,59 @@ transitionTimeline.from(".scene-stoning", {
     start: "-200px top",
     end: "+=200px",
   },
-  opacity: 0,
+  autoAlpha: 0,
   x: 500,
 });
-// MARK: Text transition
+// MARK: Text transition (out)
 const texts = document.querySelector("#text").children;
+function animateText(element, start, duration = 100) {
+  gsap.from(element, {
+    scrollTrigger: {
+      scroller: ".drawer-content",
+      trigger: "#text",
+      scrub: true,
+      start: start,
+      end: "+=100",
+    },
+    autoAlpha: 0,
+    // y: -50,
+  });
+  gsap.to(element, {
+    scrollTrigger: {
+      scroller: ".drawer-content",
+      trigger: "#text",
+      scrub: true,
+      start: start + duration + 100,
+      end: "+=100",
+    },
+    immediateRender: false,
+    autoAlpha: 0,
+    // y: -50,
+  });
+}
 gsap.to(texts[0], {
   scrollTrigger: {
     scroller: ".drawer-content",
-    trigger: ".disciple-choosing",
+    trigger: texts[0],
     scrub: true,
     start: 0,
-    end: "+=25%",
+    end: "+=100",
   },
-  opacity: 0,
-  y: -50,
+  autoAlpha: 0,
+  // y: -50,
 });
-gsap.from(texts[1], {
-  scrollTrigger: {
-    scroller: ".drawer-content",
-    trigger: ".disciple-choosing",
-    scrub: true,
-    start: 20,
-    end: "+=500px",
-  },
-  opacity: 0,
-  y: 100,
-});
-
+animateText(texts[1], 30);
+animateText(texts[2], 500);
+animateText(texts[3], 700, 300);
+animateText(texts[4], 1200);
+animateText(texts[5], 1400);
 gsap.to(".scene-stoning", {
   scrollTrigger: {
     scroller: ".drawer-content",
     trigger: ".scene-stoning",
     end: "+=150px",
     pin: true,
+    pinType: "fixed",
   },
 });
 document.querySelectorAll("#rocks > img").forEach((element) => {
@@ -189,7 +245,7 @@ gsap.to(".scene-stoning .stephen-alive", {
     end: `${rockContacts[rockContacts.length - 1]}px`,
     scrub: true,
   },
-  opacity: 0,
+  autoAlpha: 0,
 });
 gsap.from(".scene-stoning .stephen-dead", {
   scrollTrigger: {
@@ -199,7 +255,7 @@ gsap.from(".scene-stoning .stephen-dead", {
     end: `${rockContacts[rockContacts.length - 1]}px`,
     scrub: true,
   },
-  opacity: 0,
+  autoAlpha: 0,
 });
 
 for (let i = 0; i < rockContacts.length; i++) {
