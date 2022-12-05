@@ -68,8 +68,23 @@ gsap.to(".disciples div:first-child", {
   duration: 1,
   // or else he'll "glitch down" because at the start we were animating him
   immediateRender: false,
-  scale: 1.5,
-  x: "400%",
+  scale: 3,
+  x: "100%",
+  y: "90%",
+});
+gsap.to(".disciples div:first-child", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".disciple-choosing",
+    scrub: true,
+    start: 1000,
+    end: "+=200",
+    ease: "linear",
+  },
+  // or else he'll "glitch down" because at the start we were animating him
+  immediateRender: false,
+  scale: 2,
+  x: "350%",
   y: "270%",
 });
 gsap.from("#sanhedrin", {
@@ -77,7 +92,7 @@ gsap.from("#sanhedrin", {
     scroller: ".drawer-content",
     trigger: ".disciple-choosing",
     scrub: true,
-    start: 900,
+    start: 1000,
     end: "+=200",
   },
   duration: 1,
@@ -93,6 +108,37 @@ gsap.from("#sanhedrin", {
     pinType: "fixed",
   },
 });
+gsap.from("#audience-img", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".disciple-choosing",
+    scrub: true,
+    start: 400,
+    end: "+=300",
+  },
+  opacity: 0,
+});
+gsap.to("#audience-img", {
+  scrollTrigger: {
+    scroller: ".drawer-content",
+    trigger: ".disciple-choosing",
+    scrub: true,
+    start: 1000,
+    end: "+=300",
+  },
+  immediateRender: false,
+  opacity: 0,
+});
+// gsap.to("#audience-img", {
+//   scrollTrigger: {
+//     scroller: ".drawer-content",
+//     trigger: "#audience-img",
+//     scrub: true,
+//     start: 700,
+//     end: "+=100",
+//   },
+//   autoAlpha: 0,
+// });
 
 gsap.to(".disciple-choosing", {
   scrollTrigger: {
@@ -156,7 +202,7 @@ gsap.to(texts[0], {
 });
 animateText(texts[1], 30);
 animateText(texts[2], 500);
-animateText(texts[3], 800);
+animateText(texts[3], 700, 300);
 animateText(texts[4], 1200);
 animateText(texts[5], 1400);
 gsap.to(".scene-stoning", {
