@@ -129,16 +129,6 @@ gsap.to("#audience-img", {
   immediateRender: false,
   opacity: 0,
 });
-// gsap.to("#audience-img", {
-//   scrollTrigger: {
-//     scroller: ".drawer-content",
-//     trigger: "#audience-img",
-//     scrub: true,
-//     start: 700,
-//     end: "+=100",
-//   },
-//   autoAlpha: 0,
-// });
 
 gsap.to(".disciple-choosing", {
   scrollTrigger: {
