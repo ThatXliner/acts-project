@@ -56,3 +56,14 @@ main svg {
   position: absolute;
   filter: drop-shadow(4px 4px 3px rgba(100, 100, 111, 0.2));
 }
+
+#quiz {
+  position: absolute;
+  width: 80%;
+  left: 100px;
+  top: 100%;
+  color: black;
+  background-color: #eee;
+  height: 550px;
+  border-radius: 20px;
+}

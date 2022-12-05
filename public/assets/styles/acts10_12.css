@@ -66,8 +66,8 @@
 }
 
 .spacing {
+  height: 5500px;
   position: absolute;
-  height: 1000%;
 }
 
 .title2 {
@@ -97,4 +97,8 @@
   position: absolute;
   top: 90px;
   left: 80px;
+}
+
+#quiz {
+  top: 340%;
 }
