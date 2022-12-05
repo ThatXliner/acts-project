@@ -37,10 +37,10 @@ gsap.from("#feature-symbol", {
   duration: 0.5,
   ease: "out",
 });
-gsap.from("#wrapup-symbol", {
+gsap.from("#quiz-symbol", {
   scrollTrigger: {
     scroller: ".drawer-content",
-    trigger: "#wrapup-symbol",
+    trigger: "#quiz-symbol",
   },
   alpha: 0,
   rotation: -360,
