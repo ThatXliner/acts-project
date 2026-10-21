@@ -3,7 +3,7 @@
         {
             "type": "command",
             "name": "Start Vite Server",
-            "program": "bun",
+            "program": "npm",
             "args": ["run", "dev"]
         }
     ]
