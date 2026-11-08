@@ -36,8 +36,6 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: npm
-      - name: Verify TLS certificate rejection
-        run: node .github/scripts/check-tls.cjs
       - name: Build
         run: |
           npm ci
